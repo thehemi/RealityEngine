@@ -1,0 +1,14 @@
+$ship = 1;
+@dependencies = (
+                 "/LIBS/inc/DX9SDKSampleFramework",
+
+                 "/LIBS/lib/debug/DX9SDKSampleFramework.lib",
+                 "/LIBS/lib/debug/DX9SDKSampleFramework_mt.lib",
+                 "/LIBS/lib/debug/DX9SDKSampleFramework_mtdll.lib",
+
+                 "/LIBS/lib/release/DX9SDKSampleFramework.lib",
+                 "/LIBS/lib/release/DX9SDKSampleFramework_mt.lib",
+                 "/LIBS/lib/release/DX9SDKSampleFramework_mtdll.lib",
+                );
+
+1;

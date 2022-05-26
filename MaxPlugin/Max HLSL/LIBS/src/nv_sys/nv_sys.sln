@@ -1,0 +1,38 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nv_sys", "nv_sys.vcproj", "{5A15CA04-2B2E-436A-8000-BD1798CD340D}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = nv_sys.vcproj
+		SccProjectName0 = nv_sys
+		SccLocalPath0 = ..\\..
+		SccProvider0 = MSSCCI:PushOk\u0020CVS\u0020Proxy
+		SccProjectFilePathRelativizedFromConnection0 = src\\nv_sys\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Multithreaded DLL = Debug Multithreaded DLL
+		Release = Release
+		Release Multithreaded DLL = Release Multithreaded DLL
+		Release Multithreaded DLL with PDB = Release Multithreaded DLL with PDB
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Debug.ActiveCfg = Debug|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Debug.Build.0 = Debug|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Release.ActiveCfg = Release|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Release.Build.0 = Release|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Release Multithreaded DLL with PDB.ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{5A15CA04-2B2E-436A-8000-BD1798CD340D}.Release Multithreaded DLL with PDB.Build.0 = Release Multithreaded DLL with PDB|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

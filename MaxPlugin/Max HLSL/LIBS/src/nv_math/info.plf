@@ -1,0 +1,15 @@
+$ship = 1;
+
+@dependencies = (
+                 "/LIBS/inc/nv_math",
+                 
+                 "/LIBS/lib/debug/nv_math.lib",
+                 "/LIBS/lib/debug/nv_math_mt.lib",
+                 "/LIBS/lib/debug/nv_math_mtdll.lib",
+
+                 "/LIBS/lib/release/nv_math.lib",
+                 "/LIBS/lib/release/nv_math_mt.lib",
+                 "/LIBS/lib/release/nv_math_mtdll.lib",
+                );
+
+1;

@@ -1,0 +1,7 @@
+$ship = 1;
+
+@dependencies = (
+                 "/LIBS/inc/nv_sys",
+                );
+
+1;

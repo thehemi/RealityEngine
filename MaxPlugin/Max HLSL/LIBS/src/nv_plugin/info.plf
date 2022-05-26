@@ -1,0 +1,11 @@
+$ship = 1;
+
+@dependencies = (
+                 "/LIBS/inc/nv_plugin",
+                 
+                 "/LIBS/lib/debug/nv_plugin_mtdll.lib",
+
+                 "/LIBS/lib/release/nv_plugin_mtdll.lib",
+                );
+
+1;

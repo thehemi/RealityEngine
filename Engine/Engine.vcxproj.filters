@@ -1,0 +1,794 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{8bceae5d-1e26-46be-a098-5ddc17bbe03a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Networking">
+      <UniqueIdentifier>{99feb7ce-4a4b-4995-bc1a-1da3b179a4da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\Networking\raklib">
+      <UniqueIdentifier>{3bcec450-9c14-4bdd-a976-1b83bf5cdf76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared\FX">
+      <UniqueIdentifier>{254ed1ed-11a5-47d6-92db-44415e94662c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DXCommon">
+      <UniqueIdentifier>{be59c290-daad-4f78-910a-e05300ed9579}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vorbis">
+      <UniqueIdentifier>{2da8176d-82cc-4b8f-bbe6-c70ffd2f66a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Serializers">
+      <UniqueIdentifier>{5216fe63-2458-42f6-b7e3-e6c028741d31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Compiler">
+      <UniqueIdentifier>{74b00a78-b223-4a5b-9f28-47f57640e40d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{745a5757-8b72-4a52-b9fb-c1648e1f8573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\FX">
+      <UniqueIdentifier>{ec7484ad-b7ea-4fbb-ba07-c9ffcfd2e980}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\EngineSrc\Collision\AABBSweep.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Actor.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Audio.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\BatchRenderer.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\BBox.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\bsptreedata.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\CallStackDumper.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Camera.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\Canvas.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\ClothSimulation.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Collision\CollideAndSlide.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Collision\Collision.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Collision\CollisionRoutines.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\configdatabase.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ConfigFile.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\configmanager.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\cspatialpartition.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\DShowTextures.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\DXInput.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Editor.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\EditorGizmo.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\EditorGUIs.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Engine.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\FnMap8.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Frame.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\FXManager.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\getdxver.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\GlareDefD3D.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\GUISystem.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\HDR.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\IndoorVolume.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Input.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Light.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\LightMapping.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\LODManager.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Log.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Material.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\Matrix.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\mdump.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\Mesh.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\MeshOps.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Model.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\ModelAnimation.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\NetworkEditor.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\NormalMaps.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\NVMeshMender.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\OcclusionCulling.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\Plane.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\PostProcess.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Precache.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\PRT.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\RenderDevice.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\RenderWrap.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Script.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\ScriptEngine.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\ScriptSystem.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializer.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Shader.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\ShaderScripts.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\ShadowMapping.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\Shared.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\SplitCode.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\SpringSystem.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\SSystemStub.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\StackTrace.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\stdafx.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\StreamingOgg.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\Texture.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Graphics\TextureManager.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\TokamakBodies.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\TokamakPhysics.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\Vector.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\World.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Collision\WorldCollision.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Collision\WorldPhysics.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Networking\Client.cpp">
+      <Filter>Shared\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Networking\GameRecord.cpp">
+      <Filter>Shared\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Networking\NetworkActor.cpp">
+      <Filter>Shared\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Networking\NetworkClient.cpp">
+      <Filter>Shared\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Networking\Server.cpp">
+      <Filter>Shared\Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\RakNet\GetTime.cpp">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\FX\SkyController.cpp">
+      <Filter>Shared\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\FX\Software_Noisemaker.cpp">
+      <Filter>Shared\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\FX\Surface.cpp">
+      <Filter>Shared\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\FX\WaterSurface.cpp">
+      <Filter>Shared\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\dsutil.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\dxstdafx.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUT.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTenum.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTgui.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTMesh.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTmisc.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTSettingsDlg.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\PRTMesh.cpp">
+      <Filter>DXCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\DOMPrintErrorHandler.cpp">
+      <Filter>Serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\DOMPrintFilter.cpp">
+      <Filter>Serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\DOMTreeErrorReporter.cpp">
+      <Filter>Serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\OBJ.cpp">
+      <Filter>Serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\XFile.cpp">
+      <Filter>Serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\XMLSerializer.cpp">
+      <Filter>Serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\XMLSystem.cpp">
+      <Filter>Serializers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Compiler\Compiler.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Compiler\PRTSimulator.cpp">
+      <Filter>Compiler</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\EngineInc\Actor.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Audio.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Base.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\BatchRenderer.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\BBox.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\bsptreedata.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\CallStackDumper.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Camera.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Canvas.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\classmap.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\ClothSimulator.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Collision.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Collision\CollisionRoutines.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\configdatabase.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ConfigFile.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\configmanager.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\D3DCustom.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Graphics\dshowtextures.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\DXInput.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Editor.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\EditorGizmo.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\EditorItem.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Engine.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\FnMap8.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Frame.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\FXManager.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Geometry.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\GlareDefD3D.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\GUISystem.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\HDR.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\IndoorVolume.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Input.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\ispatialpartition.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Lean_windows.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Light.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\LODManager.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Log.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Material.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Matrix.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\mdump.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Mesh.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Model.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\NetworkEditor.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\NVMeshMender.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\OcclusionCulling.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Plane.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\PostProcess.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Precache.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Profiler.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\RenderDevice.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\RenderWrap.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\ResourceManager.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Script.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\ScriptEngine.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\ScriptSystem.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Serializer.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Shader.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\ShadowMapping.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Shared.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\SharedStructures.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\SpringSystem.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\SSystemStub.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\stdafx.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\StreamingOgg.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Texture.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Graphics\TextureManager.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\TokamakPhysics.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\utlhash.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\utllinkedlist.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\utlmemory.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Vector.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\windowsversion.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\World.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Client.h">
+      <Filter>Shared\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\GameRecord.h">
+      <Filter>Shared\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\NetShared.h">
+      <Filter>Shared\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\NetworkActor.h">
+      <Filter>Shared\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\NetworkClient.h">
+      <Filter>Shared\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\Server.h">
+      <Filter>Shared\Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RakNet\BinarySearchTree.h">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RakNet\GetTime.h">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RakNet\NetworkTypes.h">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RakNet\PacketEnumerations.h">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RakNet\PacketPriority.h">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RakNet\RakClientInterface.h">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RakNet\RakNetworkFactory.h">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\RakNet\RakServerInterface.h">
+      <Filter>Shared\Networking\raklib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\SkyController.h">
+      <Filter>Shared\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\FX\Software_Noisemaker.h">
+      <Filter>Shared\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\FX\Surface.h">
+      <Filter>Shared\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineInc\WaterSurface.h">
+      <Filter>Shared\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\dsutil.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\dxstdafx.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\DXUT.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\DXUTenum.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\DXUTgui.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\DXUTMesh.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\DXUTmisc.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\DXUTSettingsDlg.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\dxcommon\PRTMesh.h">
+      <Filter>DXCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\vorbis\codec.h">
+      <Filter>vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\vorbis\ogg.h">
+      <Filter>vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\vorbis\os_types.h">
+      <Filter>vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\vorbis\vorbisenc.h">
+      <Filter>vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\vorbis\vorbisfile.h">
+      <Filter>vorbis</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Serializers\DOMPrintErrorHandler.hpp">
+      <Filter>Serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Serializers\DOMPrintFilter.hpp">
+      <Filter>Serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Serializers\DOMTreeErrorReporter.hpp">
+      <Filter>Serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Serializers\OBJ.h">
+      <Filter>Serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Serializers\XFile.h">
+      <Filter>Serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Serializers\XMLSerializer.h">
+      <Filter>Serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Serializers\XMLSystem.h">
+      <Filter>Serializers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Compiler\Compiler.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\EngineSrc\Compiler\PRTSimulator.h">
+      <Filter>Compiler</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Bin\shaders\Types.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\Libs\RakNet.lib">
+      <Filter>Shared\Networking\raklib</Filter>
+    </Library>
+    <Library Include="..\EngineSrc\vorbis\vorbis_static.lib">
+      <Filter>vorbis</Filter>
+    </Library>
+    <Library Include="..\EngineSrc\vorbis\vorbisfile_static.lib">
+      <Filter>vorbis</Filter>
+    </Library>
+    <Library Include="..\EngineSrc\vorbis\ogg_static.lib" />
+    <Library Include="..\libs\Opcode.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\dxcommon\Important.txt">
+      <Filter>DXCommon</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Bin\Shaders\Detail.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\Diffuse.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\DiffuseSpecDetail.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\DiffuseSpecular.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\DiffuseSpecularOS.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\shaders\EnvMapping.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\shaders\Fabric.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\shaders\FullBright.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\shaders\FullBrightScrollingBG.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\shaders\HDRLighting.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\shaders\MixMaps.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\Plants.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\PostProcess.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\Refractions.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\shaders\RifleScope.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\SH_Default.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\Sky.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\shaders\System.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\WaterEffects.fx">
+      <Filter>Shaders</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\fx\DynamicWater.fx">
+      <Filter>Shaders\FX</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\fx\underwater_soft.fx">
+      <Filter>Shaders\FX</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\fx\v2_heightmapgen.fx">
+      <Filter>Shaders\FX</Filter>
+    </FxCompile>
+    <FxCompile Include="..\Bin\Shaders\fx\v2_normalmapgen.fx">
+      <Filter>Shaders\FX</Filter>
+    </FxCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Bin\System\DeviceConfigs.ini" />
+    <None Include="..\Plugins\reality.dlm" />
+    <None Include="StampVer.exe" />
+    <None Include="stampver.inf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Engine.rc" />
+  </ItemGroup>
+</Project>

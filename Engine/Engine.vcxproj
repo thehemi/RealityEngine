@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug x64|Win32">
+      <Configuration>Debug x64</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{1E2EB021-962A-4E2D-8DD7-4649EEB5C412}</ProjectGuid>
+    <SccProjectName>cryhavoc</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccProvider>MSSCCI:PushOk CVS Proxy</SccProvider>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>17.0.32505.426</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\bin\system\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\libs\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental />
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <CustomBuildStep>
+      <Command>StampVer -vstampver.inf -i4 -j4 $(TargetPath)
+</Command>
+      <Outputs>$(WkspDir)dummy;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\DXCommon;..\EngineSrc\Network\UserSource;..\EngineSrc\Network\LibrarySource;..\EngineSrc\Render\Private\DXTLib;..\Python\Include;..\EngineInc;..\EngineSrc;..\DShowBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BAN_OPCODE_AUTOLINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/fixed:no /NODEFAULTLIB:LIBCMT /IGNORE:4089  /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Rpcrt4.lib;..\xercesc\xerces-c_2D.lib;Opcode.lib;Version.lib;comctl32.lib;winmm.lib;Dbghelp.lib;dxerr9.lib;dxguid.lib;d3dx9dt.lib;dsound.lib;d3dxof.lib;dinput8.lib;..\EngineSrc\vorbis\vorbisfile_static.lib;..\EngineSrc\vorbis\vorbis_static.lib;..\EngineSrc\vorbis\ogg_static.lib;RakNet.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\bin\system\EngineD.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\libs;..\Python\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT.lib;libcp.lib;libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)EngineD.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>0</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <ImportLibrary>..\libs\EngineD.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <CustomBuildStep>
+      <Command>StampVer -vstampver.inf -i4 -j4 $(TargetPath)
+</Command>
+      <Outputs>$(WkspDir)dummy;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <AdditionalIncludeDirectories>..;..\DXCommon;..\EngineSrc\Network\UserSource;..\EngineSrc\Network\LibrarySource;..\EngineSrc\Render\Private\DXTLib;..\Python\Include;..\EngineInc;..\EngineSrc;..\DShowBase\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>false</StringPooling>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/NODEFAULTLIB:LIBCMT /IGNORE:4089 /ignore:4099
+ %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Rpcrt4.lib;..\xercesc\xerces-c_2.lib;d3dx9.lib;Opcode.lib;Version.lib;comctl32.lib;winmm.lib;Dbghelp.lib;dxerr9.lib;dxguid.lib;dsound.lib;d3dxof.lib;dinput8.lib;..\EngineSrc\vorbis\vorbisfile_static.lib;..\EngineSrc\vorbis\vorbis_static.lib;..\EngineSrc\vorbis\ogg_static.lib;RakNet.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\bin\system\Engine.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\libs;..\Python\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>libcp.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AssemblyDebug>true</AssemblyDebug>
+      <ProgramDatabaseFile>..\bin\System\Engine.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences />
+      <EnableCOMDATFolding />
+      <ImportLibrary>..\libs\Engine.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+    <CustomBuildStep>
+      <Command>StampVer -vstampver.inf -i4 -j4 $(TargetPath)
+</Command>
+      <Outputs>$(WkspDir)dummy;%(Outputs)</Outputs>
+    </CustomBuildStep>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..;..\DXCommon;..\EngineSrc\Network\UserSource;..\EngineSrc\Network\LibrarySource;..\EngineSrc\Render\Private\DXTLib;..\Python\Include;..\EngineInc;..\EngineSrc;..\DShowBase;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN64;_DEBUG;_WINDOWS;_USRDLL;ENGINE_EXPORTS;UNICODE;_UNICODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <ForceConformanceInForLoopScope>true</ForceConformanceInForLoopScope>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;4251;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>BAN_OPCODE_AUTOLINK;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/fixed:no /NODEFAULTLIB:LIBCMT /IGNORE:4089  /ignore:4099 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>Rpcrt4.lib;..\xercesc\xerces-c_2D.lib;OpcodeX64.lib;Version.lib;comctl32.lib;winmm.lib;Dbghelp.lib;dxerr9.lib;dxguid.lib;d3dx9dt.lib;dsound.lib;d3dxof.lib;dinput8.lib;..\EngineSrc\vorbis\vorbisfile_static.lib;..\EngineSrc\vorbis\vorbis_static.lib;..\EngineSrc\vorbis\ogg_static.lib;RakNet.lib;wsock32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\bin\system\EngineD.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\libs;..\Python\libs;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>MSVCRT.lib;libcp.lib;libc.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)EngineD.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <StackReserveSize>0</StackReserveSize>
+      <StackCommitSize>0</StackCommitSize>
+      <ImportLibrary>..\libs\EngineD.lib</ImportLibrary>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\dxcommon\dsutil.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\dxstdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUT.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTenum.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTgui.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTMesh.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTmisc.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\DXUTSettingsDlg.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\dxcommon\PRTMesh.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">dxstdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Actor.cpp" />
+    <ClCompile Include="..\EngineSrc\Audio.cpp" />
+    <ClCompile Include="..\EngineSrc\bsptreedata.cpp" />
+    <ClCompile Include="..\EngineSrc\CallStackDumper.cpp" />
+    <ClCompile Include="..\EngineSrc\Camera.cpp" />
+    <ClCompile Include="..\EngineSrc\ClothSimulation.cpp" />
+    <ClCompile Include="..\EngineSrc\Collision\AABBSweep.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Collision\CollideAndSlide.cpp" />
+    <ClCompile Include="..\EngineSrc\Collision\Collision.cpp" />
+    <ClCompile Include="..\EngineSrc\Collision\CollisionRoutines.cpp" />
+    <ClCompile Include="..\EngineSrc\Collision\WorldCollision.cpp" />
+    <ClCompile Include="..\EngineSrc\Collision\WorldPhysics.cpp" />
+    <ClCompile Include="..\EngineSrc\Compiler\Compiler.cpp" />
+    <ClCompile Include="..\EngineSrc\Compiler\PRTSimulator.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\configdatabase.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\configmanager.cpp" />
+    <ClCompile Include="..\EngineSrc\cspatialpartition.cpp" />
+    <ClCompile Include="..\EngineSrc\DXInput.cpp" />
+    <ClCompile Include="..\EngineSrc\Editor.cpp" />
+    <ClCompile Include="..\EngineSrc\EditorGizmo.cpp" />
+    <ClCompile Include="..\EngineSrc\EditorGUIs.cpp" />
+    <ClCompile Include="..\EngineSrc\Engine.cpp" />
+    <ClCompile Include="..\EngineSrc\FnMap8.cpp" />
+    <ClCompile Include="..\EngineSrc\Frame.cpp" />
+    <ClCompile Include="..\EngineSrc\FX\SkyController.cpp" />
+    <ClCompile Include="..\EngineSrc\FX\Software_Noisemaker.cpp" />
+    <ClCompile Include="..\EngineSrc\FX\Surface.cpp" />
+    <ClCompile Include="..\EngineSrc\FX\WaterSurface.cpp" />
+    <ClCompile Include="..\EngineSrc\getdxver.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\GlareDefD3D.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\BatchRenderer.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\Canvas.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\DShowTextures.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\FXManager.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\Mesh.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\NormalMaps.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\RenderDevice.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\RenderWrap.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\Texture.cpp" />
+    <ClCompile Include="..\EngineSrc\Graphics\TextureManager.cpp" />
+    <ClCompile Include="..\EngineSrc\GUISystem.cpp" />
+    <ClCompile Include="..\EngineSrc\HDR.cpp" />
+    <ClCompile Include="..\EngineSrc\IndoorVolume.cpp" />
+    <ClCompile Include="..\EngineSrc\Input.cpp" />
+    <ClCompile Include="..\EngineSrc\Light.cpp" />
+    <ClCompile Include="..\EngineSrc\LightMapping.cpp" />
+    <ClCompile Include="..\EngineSrc\LODManager.cpp" />
+    <ClCompile Include="..\EngineSrc\Log.cpp" />
+    <ClCompile Include="..\EngineSrc\Material.cpp" />
+    <ClCompile Include="..\EngineSrc\mdump.cpp" />
+    <ClCompile Include="..\EngineSrc\MeshOps.cpp" />
+    <ClCompile Include="..\EngineSrc\Model.cpp" />
+    <ClCompile Include="..\EngineSrc\ModelAnimation.cpp" />
+    <ClCompile Include="..\EngineSrc\NetworkEditor.cpp" />
+    <ClCompile Include="..\EngineSrc\Networking\Client.cpp" />
+    <ClCompile Include="..\EngineSrc\Networking\GameRecord.cpp" />
+    <ClCompile Include="..\EngineSrc\Networking\NetworkActor.cpp" />
+    <ClCompile Include="..\EngineSrc\Networking\NetworkClient.cpp" />
+    <ClCompile Include="..\EngineSrc\Networking\Server.cpp" />
+    <ClCompile Include="..\EngineSrc\NVMeshMender.cpp">
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ForceConformanceInForLoopScope>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <ForceConformanceInForLoopScope Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ForceConformanceInForLoopScope>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\OcclusionCulling.cpp" />
+    <ClCompile Include="..\EngineSrc\PostProcess.cpp" />
+    <ClCompile Include="..\EngineSrc\Precache.cpp" />
+    <ClCompile Include="..\EngineSrc\PRT.cpp" />
+    <ClCompile Include="..\EngineSrc\Script.cpp" />
+    <ClCompile Include="..\EngineSrc\ScriptEngine.cpp" />
+    <ClCompile Include="..\EngineSrc\ScriptSystem.cpp" />
+    <ClCompile Include="..\EngineSrc\Serializer.cpp" />
+    <ClCompile Include="..\EngineSrc\Serializers\DOMPrintErrorHandler.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\DOMPrintFilter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\DOMTreeErrorReporter.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\Serializers\OBJ.cpp" />
+    <ClCompile Include="..\EngineSrc\Serializers\XFile.cpp" />
+    <ClCompile Include="..\EngineSrc\Serializers\XMLSerializer.cpp" />
+    <ClCompile Include="..\EngineSrc\Serializers\XMLSystem.cpp" />
+    <ClCompile Include="..\EngineSrc\Shader.cpp" />
+    <ClCompile Include="..\EngineSrc\ShaderScripts.cpp" />
+    <ClCompile Include="..\EngineSrc\ShadowMapping.cpp" />
+    <ClCompile Include="..\EngineSrc\SplitCode.cpp" />
+    <ClCompile Include="..\EngineSrc\SpringSystem.cpp" />
+    <ClCompile Include="..\EngineSrc\SSystemStub.cpp" />
+    <ClCompile Include="..\EngineSrc\StackTrace.cpp" />
+    <ClCompile Include="..\EngineSrc\stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\EngineSrc\StreamingOgg.cpp" />
+    <ClCompile Include="..\EngineSrc\TokamakBodies.cpp" />
+    <ClCompile Include="..\EngineSrc\TokamakPhysics.cpp" />
+    <ClCompile Include="..\EngineSrc\World.cpp" />
+    <ClCompile Include="..\RakNet\GetTime.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug x64|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\shared\BBox.cpp" />
+    <ClCompile Include="..\shared\ConfigFile.cpp" />
+    <ClCompile Include="..\shared\Matrix.cpp" />
+    <ClCompile Include="..\shared\Plane.cpp" />
+    <ClCompile Include="..\shared\Shared.cpp" />
+    <ClCompile Include="..\shared\Vector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Bin\shaders\Types.h" />
+    <ClInclude Include="..\dxcommon\dsutil.h" />
+    <ClInclude Include="..\dxcommon\dxstdafx.h" />
+    <ClInclude Include="..\dxcommon\DXUT.h" />
+    <ClInclude Include="..\dxcommon\DXUTenum.h" />
+    <ClInclude Include="..\dxcommon\DXUTgui.h" />
+    <ClInclude Include="..\dxcommon\DXUTMesh.h" />
+    <ClInclude Include="..\dxcommon\DXUTmisc.h" />
+    <ClInclude Include="..\dxcommon\DXUTSettingsDlg.h" />
+    <ClInclude Include="..\dxcommon\PRTMesh.h" />
+    <ClInclude Include="..\EngineInc\Actor.h" />
+    <ClInclude Include="..\EngineInc\Audio.h" />
+    <ClInclude Include="..\EngineInc\Base.h" />
+    <ClInclude Include="..\EngineInc\Camera.h" />
+    <ClInclude Include="..\EngineInc\Canvas.h" />
+    <ClInclude Include="..\EngineInc\classmap.h" />
+    <ClInclude Include="..\EngineInc\Client.h" />
+    <ClInclude Include="..\EngineInc\configdatabase.h" />
+    <ClInclude Include="..\EngineInc\configmanager.h" />
+    <ClInclude Include="..\EngineInc\D3DCustom.h" />
+    <ClInclude Include="..\EngineInc\Editor.h" />
+    <ClInclude Include="..\EngineInc\EditorGizmo.h" />
+    <ClInclude Include="..\EngineInc\Engine.h" />
+    <ClInclude Include="..\EngineInc\Frame.h" />
+    <ClInclude Include="..\EngineInc\FXManager.h" />
+    <ClInclude Include="..\EngineInc\GameRecord.h" />
+    <ClInclude Include="..\EngineInc\Geometry.h" />
+    <ClInclude Include="..\EngineInc\GlareDefD3D.h" />
+    <ClInclude Include="..\EngineInc\GUISystem.h" />
+    <ClInclude Include="..\EngineInc\HDR.h" />
+    <ClInclude Include="..\EngineInc\IndoorVolume.h" />
+    <ClInclude Include="..\EngineInc\Input.h" />
+    <ClInclude Include="..\EngineInc\Light.h" />
+    <ClInclude Include="..\EngineInc\LODManager.h" />
+    <ClInclude Include="..\EngineInc\Material.h" />
+    <ClInclude Include="..\EngineInc\Mesh.h" />
+    <ClInclude Include="..\EngineInc\Model.h" />
+    <ClInclude Include="..\EngineInc\NetShared.h" />
+    <ClInclude Include="..\EngineInc\NetworkActor.h" />
+    <ClInclude Include="..\EngineInc\NetworkClient.h" />
+    <ClInclude Include="..\EngineInc\OcclusionCulling.h" />
+    <ClInclude Include="..\EngineInc\PostProcess.h" />
+    <ClInclude Include="..\EngineInc\Precache.h" />
+    <ClInclude Include="..\EngineInc\Profiler.h" />
+    <ClInclude Include="..\EngineInc\RenderDevice.h" />
+    <ClInclude Include="..\EngineInc\RenderWrap.h" />
+    <ClInclude Include="..\EngineInc\ResourceManager.h" />
+    <ClInclude Include="..\EngineInc\Script.h" />
+    <ClInclude Include="..\EngineInc\ScriptEngine.h" />
+    <ClInclude Include="..\EngineInc\Server.h" />
+    <ClInclude Include="..\EngineInc\Shader.h" />
+    <ClInclude Include="..\EngineInc\SharedStructures.h" />
+    <ClInclude Include="..\EngineInc\SkyController.h" />
+    <ClInclude Include="..\EngineInc\SSystemStub.h" />
+    <ClInclude Include="..\EngineInc\StreamingOgg.h" />
+    <ClInclude Include="..\EngineInc\Texture.h" />
+    <ClInclude Include="..\EngineInc\TokamakPhysics.h" />
+    <ClInclude Include="..\EngineInc\WaterSurface.h" />
+    <ClInclude Include="..\EngineInc\World.h" />
+    <ClInclude Include="..\EngineSrc\BatchRenderer.h" />
+    <ClInclude Include="..\EngineSrc\bsptreedata.h" />
+    <ClInclude Include="..\EngineSrc\CallStackDumper.h" />
+    <ClInclude Include="..\EngineSrc\ClothSimulator.h" />
+    <ClInclude Include="..\EngineSrc\Collision.h" />
+    <ClInclude Include="..\EngineSrc\Collision\CollisionRoutines.h" />
+    <ClInclude Include="..\EngineSrc\Compiler\Compiler.h" />
+    <ClInclude Include="..\EngineSrc\Compiler\PRTSimulator.h" />
+    <ClInclude Include="..\EngineSrc\DXInput.h" />
+    <ClInclude Include="..\EngineSrc\EditorItem.h" />
+    <ClInclude Include="..\EngineSrc\FnMap8.h" />
+    <ClInclude Include="..\EngineSrc\FX\Software_Noisemaker.h" />
+    <ClInclude Include="..\EngineSrc\FX\Surface.h" />
+    <ClInclude Include="..\EngineSrc\Graphics\dshowtextures.h" />
+    <ClInclude Include="..\EngineSrc\Graphics\TextureManager.h" />
+    <ClInclude Include="..\EngineSrc\ispatialpartition.h" />
+    <ClInclude Include="..\EngineSrc\Log.h" />
+    <ClInclude Include="..\EngineSrc\mdump.h" />
+    <ClInclude Include="..\EngineSrc\NetworkEditor.h" />
+    <ClInclude Include="..\EngineSrc\NVMeshMender.h" />
+    <ClInclude Include="..\EngineSrc\ScriptSystem.h" />
+    <ClInclude Include="..\EngineSrc\Serializer.h" />
+    <ClInclude Include="..\EngineSrc\Serializers\DOMPrintErrorHandler.hpp" />
+    <ClInclude Include="..\EngineSrc\Serializers\DOMPrintFilter.hpp" />
+    <ClInclude Include="..\EngineSrc\Serializers\DOMTreeErrorReporter.hpp" />
+    <ClInclude Include="..\EngineSrc\Serializers\OBJ.h" />
+    <ClInclude Include="..\EngineSrc\Serializers\XFile.h" />
+    <ClInclude Include="..\EngineSrc\Serializers\XMLSerializer.h" />
+    <ClInclude Include="..\EngineSrc\Serializers\XMLSystem.h" />
+    <ClInclude Include="..\EngineSrc\ShadowMapping.h" />
+    <ClInclude Include="..\EngineSrc\SpringSystem.h" />
+    <ClInclude Include="..\EngineSrc\stdafx.h" />
+    <ClInclude Include="..\EngineSrc\vorbis\codec.h" />
+    <ClInclude Include="..\EngineSrc\vorbis\ogg.h" />
+    <ClInclude Include="..\EngineSrc\vorbis\os_types.h" />
+    <ClInclude Include="..\EngineSrc\vorbis\vorbisenc.h" />
+    <ClInclude Include="..\EngineSrc\vorbis\vorbisfile.h" />
+    <ClInclude Include="..\EngineSrc\windowsversion.h" />
+    <ClInclude Include="..\RakNet\BinarySearchTree.h" />
+    <ClInclude Include="..\RakNet\GetTime.h" />
+    <ClInclude Include="..\RakNet\NetworkTypes.h" />
+    <ClInclude Include="..\RakNet\PacketEnumerations.h" />
+    <ClInclude Include="..\RakNet\PacketPriority.h" />
+    <ClInclude Include="..\RakNet\RakClientInterface.h" />
+    <ClInclude Include="..\RakNet\RakNetworkFactory.h" />
+    <ClInclude Include="..\RakNet\RakServerInterface.h" />
+    <ClInclude Include="..\shared\BBox.h" />
+    <ClInclude Include="..\shared\ConfigFile.h" />
+    <ClInclude Include="..\shared\Lean_windows.h" />
+    <ClInclude Include="..\shared\Matrix.h" />
+    <ClInclude Include="..\shared\Plane.h" />
+    <ClInclude Include="..\shared\Shared.h" />
+    <ClInclude Include="..\shared\utlhash.h" />
+    <ClInclude Include="..\shared\utllinkedlist.h" />
+    <ClInclude Include="..\shared\utlmemory.h" />
+    <ClInclude Include="..\shared\Vector.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\EngineSrc\vorbis\ogg_static.lib" />
+    <Library Include="..\EngineSrc\vorbis\vorbisfile_static.lib" />
+    <Library Include="..\EngineSrc\vorbis\vorbis_static.lib" />
+    <Library Include="..\libs\Opcode.lib" />
+    <Library Include="..\Libs\RakNet.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\dxcommon\Important.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="..\Bin\Shaders\Detail.fx" />
+    <FxCompile Include="..\Bin\Shaders\Diffuse.fx" />
+    <FxCompile Include="..\Bin\Shaders\DiffuseSpecDetail.fx" />
+    <FxCompile Include="..\Bin\Shaders\DiffuseSpecular.fx" />
+    <FxCompile Include="..\Bin\Shaders\DiffuseSpecularOS.fx" />
+    <FxCompile Include="..\Bin\shaders\EnvMapping.fx" />
+    <FxCompile Include="..\Bin\shaders\Fabric.fx" />
+    <FxCompile Include="..\Bin\shaders\FullBright.fx" />
+    <FxCompile Include="..\Bin\shaders\FullBrightScrollingBG.fx" />
+    <FxCompile Include="..\Bin\Shaders\fx\DynamicWater.fx" />
+    <FxCompile Include="..\Bin\Shaders\fx\underwater_soft.fx" />
+    <FxCompile Include="..\Bin\Shaders\fx\v2_heightmapgen.fx" />
+    <FxCompile Include="..\Bin\Shaders\fx\v2_normalmapgen.fx" />
+    <FxCompile Include="..\Bin\shaders\HDRLighting.fx" />
+    <FxCompile Include="..\Bin\shaders\MixMaps.fx" />
+    <FxCompile Include="..\Bin\Shaders\Plants.fx" />
+    <FxCompile Include="..\Bin\Shaders\PostProcess.fx" />
+    <FxCompile Include="..\Bin\Shaders\Refractions.fx" />
+    <FxCompile Include="..\Bin\shaders\RifleScope.fx" />
+    <FxCompile Include="..\Bin\Shaders\SH_Default.fx" />
+    <FxCompile Include="..\Bin\Shaders\Sky.fx" />
+    <FxCompile Include="..\Bin\shaders\System.fx" />
+    <FxCompile Include="..\Bin\Shaders\WaterEffects.fx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Bin\System\DeviceConfigs.ini" />
+    <None Include="..\Plugins\reality.dlm" />
+    <None Include="StampVer.exe" />
+    <None Include="stampver.inf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Engine.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

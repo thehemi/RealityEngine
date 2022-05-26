@@ -1,0 +1,3 @@
+LIBRARY	nv_gui_mtdll_vc7
+EXPORTS
+NVCreateInstance

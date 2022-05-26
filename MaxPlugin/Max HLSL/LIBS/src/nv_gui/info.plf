@@ -1,0 +1,13 @@
+$ship = 1;
+
+@dependencies = (
+                 "/LIBS/inc/nv_gui",
+
+                 "/LIBS/implib/debug/nv_gui_mtdll.lib",
+                 "/LIBS/implib/release/nv_gui_mtdll.lib",
+
+                 "/LIBS/dll/debug/nv_gui_mtdll.dll",
+                 "/LIBS/dll/release/nv_gui_mtdll.dll",
+                );
+
+1;

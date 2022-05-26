@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BuildTool", "BuildTool.vcproj", "{14EF297A-E19D-4AA4-A896-2DDCA435EA4B}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+		Release SSE = Release SSE
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{14EF297A-E19D-4AA4-A896-2DDCA435EA4B}.Debug.ActiveCfg = Debug|Win32
+		{14EF297A-E19D-4AA4-A896-2DDCA435EA4B}.Debug.Build.0 = Debug|Win32
+		{14EF297A-E19D-4AA4-A896-2DDCA435EA4B}.Release.ActiveCfg = Release|Win32
+		{14EF297A-E19D-4AA4-A896-2DDCA435EA4B}.Release.Build.0 = Release|Win32
+		{14EF297A-E19D-4AA4-A896-2DDCA435EA4B}.Release SSE.ActiveCfg = Release SSE|Win32
+		{14EF297A-E19D-4AA4-A896-2DDCA435EA4B}.Release SSE.Build.0 = Release SSE|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

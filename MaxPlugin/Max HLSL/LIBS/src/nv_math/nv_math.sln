@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nv_math", "nv_math.vcproj", "{1D889CD8-9374-445F-81A0-E42F32069CBF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = nv_math.vcproj
+		SccProjectName0 = sdomine-98
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:PushOk\u0020CVS\u0020Proxy
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Multithreaded = Debug Multithreaded
+		Debug Multithreaded DLL = Debug Multithreaded DLL
+		Hybrid = Hybrid
+		Release = Release
+		Release Multithreaded = Release Multithreaded
+		Release Multithreaded DLL = Release Multithreaded DLL
+		Release Multithreaded DLL with PDB = Release Multithreaded DLL with PDB
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Debug.ActiveCfg = Debug|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Debug.Build.0 = Debug|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Debug Multithreaded.ActiveCfg = Debug Multithreaded|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Debug Multithreaded.Build.0 = Debug Multithreaded|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Hybrid.ActiveCfg = Hybrid|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Hybrid.Build.0 = Hybrid|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Release.ActiveCfg = Release|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Release.Build.0 = Release|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Release Multithreaded.ActiveCfg = Release Multithreaded|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Release Multithreaded.Build.0 = Release Multithreaded|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Release Multithreaded DLL with PDB.ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{1D889CD8-9374-445F-81A0-E42F32069CBF}.Release Multithreaded DLL with PDB.Build.0 = Release Multithreaded DLL with PDB|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

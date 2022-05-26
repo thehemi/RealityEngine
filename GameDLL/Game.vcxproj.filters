@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Main">
+      <UniqueIdentifier>{042480ef-a3c7-4d85-bf43-945c12098156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Game">
+      <UniqueIdentifier>{41885fb8-6cad-4216-9dd0-93430efb7ddd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Game\PhysicsObjects">
+      <UniqueIdentifier>{8e71435b-8a9c-4675-9234-541151c117a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main\Game\FX">
+      <UniqueIdentifier>{0602d9b1-9b7b-4652-b560-96c543814dbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking">
+      <UniqueIdentifier>{21515817-7bc4-445a-877c-04dceaa88789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shared">
+      <UniqueIdentifier>{64a58c4e-454a-44e6-af26-f606f8cb28f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripting">
+      <UniqueIdentifier>{7c9ba6b5-c57e-4b71-a41d-c8b7b089bb07}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ConsoleFunctions.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="GUIConsole.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraHandler.cpp">
+      <Filter>Main\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PhysicsObjects\PhysicsObjects.cpp">
+      <Filter>Main\Game\PhysicsObjects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\FX\LaserParticles.cpp">
+      <Filter>Main\Game\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\FX\lasers.cpp">
+      <Filter>Main\Game\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="game\fx\LightBeam.cpp">
+      <Filter>Main\Game\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\FX\Particles.cpp">
+      <Filter>Main\Game\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\FX\SurfaceDecal.cpp">
+      <Filter>Main\Game\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\FX\WeatherParticles.cpp">
+      <Filter>Main\Game\FX</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\GameClientModule.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="Networking\GameServerModule.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\BBox.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\ConfigFile.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\Matrix.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\Shared.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="..\shared\Vector.cpp">
+      <Filter>Shared</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptInterface\ScriptInterface.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptInterface\scriptinterface_wrap.cxx">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptInterface\Vector_wrap.cxx">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="ScriptInterface\ScriptInterface.h">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GUIConsole.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraHandler.h">
+      <Filter>Main\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PhysicsObjects\PhysicsObjects.h">
+      <Filter>Main\Game\PhysicsObjects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\FX\LaserParticles.h">
+      <Filter>Main\Game\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\FX\lasers.h">
+      <Filter>Main\Game\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="game\fx\LightBeam.h">
+      <Filter>Main\Game\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\FX\Particles.h">
+      <Filter>Main\Game\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\FX\SurfaceDecal.h">
+      <Filter>Main\Game\FX</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\GameClientModule.h">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="Networking\GameServerModule.h">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\BBox.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\ConfigFile.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Lean_windows.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Matrix.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Shared.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\utllinkedlist.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\utlmemory.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+    <ClInclude Include="..\shared\Vector.h">
+      <Filter>Shared</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

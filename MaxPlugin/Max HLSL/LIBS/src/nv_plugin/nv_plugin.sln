@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nv_plugin", "nv_plugin.vcproj", "{3A04D459-6D8E-4D3E-9629-CBE31E96ECE4}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = nv_plugin.vcproj
+		SccProjectName0 = nv_plugin
+		SccLocalPath0 = ..\\..
+		SccProvider0 = MSSCCI:PushOk\u0020CVS\u0020Proxy
+		SccProjectFilePathRelativizedFromConnection0 = src\\nv_plugin\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug Multithreaded DLL = Debug Multithreaded DLL
+		Release Multithreaded DLL = Release Multithreaded DLL
+		Release Multithreaded DLL with PDB = Release Multithreaded DLL with PDB
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{3A04D459-6D8E-4D3E-9629-CBE31E96ECE4}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{3A04D459-6D8E-4D3E-9629-CBE31E96ECE4}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{3A04D459-6D8E-4D3E-9629-CBE31E96ECE4}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{3A04D459-6D8E-4D3E-9629-CBE31E96ECE4}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+		{3A04D459-6D8E-4D3E-9629-CBE31E96ECE4}.Release Multithreaded DLL with PDB.ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{3A04D459-6D8E-4D3E-9629-CBE31E96ECE4}.Release Multithreaded DLL with PDB.Build.0 = Release Multithreaded DLL with PDB|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

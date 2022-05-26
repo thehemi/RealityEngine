@@ -1,0 +1,186 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_MAIN_ICON           ICON                    "..\\..\\common\\directx.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&Settings"
+    BEGIN
+        MENUITEM "&Reset",                      IDC_SETTINGS_RESET
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "PRTPerVertex.manifest"
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_BUILD DIALOGEX 0, 0, 364, 267
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES | WS_EX_APPWINDOW
+CAPTION "Artificial Compiler"
+FONT 8, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    LTEXT           "Build Status",IDC_STATIC,6,132,38,8
+    PUSHBUTTON      "&Build",IDC_BUILD,6,6,54,15
+    PUSHBUTTON      "Batch Build...",IDC_BATCHBUILD,66,6,54,15
+    GROUPBOX        "Build Options",IDC_STATIC,6,30,348,90
+    CONTROL         "Triangle Strips",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,24,90,60,10
+    EDITTEXT        IDC_INPUT,72,42,132,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OUTPUT,72,60,132,12,ES_AUTOHSCROLL
+    LTEXT           "Input File:",IDC_STATIC,36,42,32,8
+    LTEXT           "Output File:",IDC_STATIC,30,60,37,8
+    PUSHBUTTON      "...",IDC_BROWSEINPUT,210,42,11,14
+    PUSHBUTTON      "...",IDC_BROWSEOUTPUT,210,60,11,14
+    DEFPUSHBUTTON   "&Quit",IDC_QUIT,300,6,54,15
+    CONTROL         "",IDC_PROGRESS,"msctls_progress32",0x1,6,254,348,9
+    CONTROL         "",IDC_STATUS,"RichEdit20A",ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER | WS_BORDER | WS_VSCROLL | WS_TABSTOP,7,148,
+                    350,104
+    LTEXT           "Online Documentation",IDC_HYPERLINK,242,24,71,8
+    LTEXT           "Report Bug",IDC_EMAIL,318,24,37,8
+    CONTROL         "Exit on Success",IDC_EXITONSUCCESS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,24,102,65,10
+    EDITTEXT        IDC_NODESIZE,288,42,30,12,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Meters",IDC_STATIC,321,46,22,8
+    LTEXT           "Node Size:",IDC_STATIC,251,45,36,8
+    CONTROL         "Enable PRT",IDC_ENABLEPRT,"Button",BS_AUTOCHECKBOX | 
+                    WS_GROUP | WS_TABSTOP,263,76,65,10
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_BUILD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 357
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 260
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON                ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_COMPILER            "Helix Core Compiler Tool"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

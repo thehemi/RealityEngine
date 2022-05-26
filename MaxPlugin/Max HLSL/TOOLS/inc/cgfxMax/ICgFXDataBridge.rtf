@@ -1,0 +1,170 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fswiss\fcharset0 Arial;}}
+{\colortbl ;\red0\green0\blue0;\red0\green0\blue255;\red128\green128\blue128;\red136\green0\blue0;\red160\green0\blue160;}
+\viewkind4\uc1\pard\cf1\f0\fs20\tab\cf2 Mtl\cf1 * \cf3 Material;\par
+\par
+\cf1         \cf2 ICGFXDataBridge\cf1  * \cf3 icgfx\cf1  = 0;\par
+    \par
+        \cf2 IDXShaderManagerInterface\cf1 * \cf3 IDXShaderMgr\cf1  = \cf4 GetDXShaderManager\cf1 ();\par
+        \cf2 if\cf1  (\cf3 IDXShaderMgr\cf1 )\par
+        \{\par
+            \cf2 CustAttrib\cf1  * \cf3 custattr\cf1  = \cf3 IDXShaderMgr\cf1 ->\cf4 FindViewportShaderManager\cf1 (\cf3 Material\cf1 );\par
+            \cf2 if\cf1  (\cf3 custattr\cf1 )\par
+            \{\par
+                \cf2 IViewportShaderManager\cf1  *\cf3 IViewportShaderMgr\cf1  = (\cf2 IViewportShaderManager\cf1 *)\cf3 custattr\cf1 ->\cf4 GetInterface\cf1 (\cf5 VIEWPORT_SHADER_MANAGER_INTERFACE\cf1 );\par
+                \cf2 if\cf1  (\cf3 IViewportShaderMgr\cf1 )\par
+                \{\par
+                    \cf2 ReferenceTarget\cf1 * \cf3 reftarg\cf1  = \cf3 IViewportShaderMgr\cf1 ->\cf4 GetActiveEffect\cf1 ();\par
+                    \cf2 if\cf1  (\cf3 reftarg\cf1 )\par
+                        \cf3 icgfx\cf1  = (\cf2 ICGFXDataBridge\cf1  *)\cf3 reftarg\cf1 ->\cf4 GetInterface\cf1 (\cf5 CGFX_DATA_CLIENT_INTERFACE\cf1 );\par
+                \}\par
+            \}\par
+        \}\par
+\cf0\par
+\cf1         \cf3 MtlInf\cf1 .\cf3 mAttr\cf1 ["CgFX"]["matname"]=\cf3 MaterialName\cf1 ;\par
+        \cf2 if\cf1  (\cf3 icgfx\cf1 )\par
+        \{\par
+            \cf3 MtlInf\cf1 .\cf3 mAttr\cf1 ["CgFX"]["filename"]            = \cf3 icgfx\cf1 ->\cf4 GetCgFX\cf1 ();\par
+            \cf2 nv_connections\cf1 ::\cf2 IParameterList\cf1 * \cf3 pParamList\cf1   = \cf3 icgfx\cf1 ->\cf4 GetParameterList\cf1 ();\par
+\par
+            \cf2 for\cf1  (\cf2 unsigned\cf1  \cf2 int\cf1  \cf3 i\cf1 =0; \cf3 i\cf1  < \cf3 pParamList\cf1 ->\cf4 GetNumParameters\cf1 (); ++\cf3 i\cf1 )\par
+            \{\par
+                \cf2 nv_connections\cf1 ::\cf2 IConnectionParameter\cf1 * \cf3 pParam\cf1  = \cf3 pParamList\cf1 ->\cf4 GetActiveConnection\cf1 (\cf3 i\cf1 );\par
+\par
+                \cf2 if\cf1  (\cf3 pParam\cf1 ==0)\par
+                    \cf2 continue\cf1 ;\par
+                \par
+                \cf2 nv_attribute\cf1  & \cf3 attr\cf1  = \cf3 MtlInf\cf1 .\cf3 mAttr\cf1 ["CgFX"][\cf3 pParam\cf1 ->\cf4 GetName\cf1 ()];\par
+                \cf3 attr\cf1 ["SemanticID"] = \cf2 nv_connections\cf1 ::\cf4 ConvertSemantic\cf1 (\cf3 pParam\cf1 ->\cf4 GetSemanticID\cf1 ());\par
+\par
+                \cf2 nv_connections\cf1 ::\cf2 IAppConnection\cf1  * \cf3 pAppConnect\cf1  = \cf3 pParam\cf1 ->\cf4 GetAppConnection\cf1 ();\par
+                \cf2 if\cf1  (\cf3 pAppConnect\cf1 )\par
+                \{\par
+                    \cf3 attr\cf1 ["AppConnect"]["Name"] = \cf3 pAppConnect\cf1 ->\cf4 GetName\cf1 ();\par
+                    \cf2 unsigned\cf1  \cf2 int\cf1  \cf3 NumConnectionData\cf1  = \cf3 pAppConnect\cf1 ->\cf4 GetConnectionDataNum\cf1 ();\par
+                    \cf2 if\cf1  (\cf3 NumConnectionData\cf1 )\par
+                    \{\par
+                        \cf2 nv_attribute\cf1  * \cf3 pAttrDataConnect\cf1  = \cf2 new\cf1  \cf2 nv_attribute\cf1 [\cf3 NumConnectionData\cf1 ];\par
+                        \cf2 for\cf1  (\cf2 unsigned\cf1  \cf2 int\cf1  \cf3 j\cf1  = 0; \cf3 j\cf1  < \cf3 NumConnectionData\cf1 ; ++\cf3 j\cf1 )\par
+                        \{\par
+                            \cf3 pAttrDataConnect\cf1 [\cf3 j\cf1 ] = \cf3 pAppConnect\cf1 ->\cf4 GetConnectionData\cf1 (\cf3 j\cf1 );\par
+                        \}\par
+                        \cf3 attr\cf1 ["AppConnect"]["AppConnectData"].\cf4 array\cf1 (\cf3 pAttrDataConnect\cf1 ,\cf3 NumConnectionData\cf1 );\par
+                        \cf2 delete\cf1  [] \cf3 pAttrDataConnect\cf1 ;\par
+                    \}\par
+                \}\par
+                \cf3 attr\cf1 ["ConnectionType"] = \cf3 pParam\cf1 ->\cf4 GetConnectionType\cf1 ();\par
+\par
+                \cf2 switch\cf1 (\cf3 pParam\cf1 ->\cf4 GetConnectionType\cf1 ())\par
+                \{\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_VEC4\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Vec4\cf1 * \cf3 pVec4\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Vec4\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"].\cf4 array\cf1 (\cf3 pVec4\cf1 ->\cf4 GetVec4\cf1 ().\cf3 vec_array\cf1 ,4);\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_VEC3\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Vec3\cf1 * \cf3 pVec3\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Vec3\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"].\cf4 array\cf1 (\cf3 pVec3\cf1 ->\cf4 GetVec3\cf1 ().\cf3 vec_array\cf1 ,3);\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_VEC2\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Vec2\cf1 * \cf3 pVec2\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Vec2\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"].\cf4 array\cf1 (\cf3 pVec2\cf1 ->\cf4 GetVec2\cf1 ().\cf3 vec_array\cf1 ,2);\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_TEXTURE\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Texture\cf1 * \cf3 pTexture\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Texture\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"] = \cf3 icgfx\cf1 ->\cf4 GetTextureName\cf1 (\cf3 pTexture\cf1 ->\cf4 GetTexture\cf1 ());\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_BOOL\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Bool\cf1 * \cf3 pBool\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Bool\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"] = \cf3 pBool\cf1 ->\cf4 GetBool\cf1 ();\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_FLOAT\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Float\cf1 * \cf3 pFloat\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Float\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"] = \cf3 pFloat\cf1 ->\cf4 GetFloat\cf1 ();\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_MATRIX4x4\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Matrix4x4\cf1 * \cf3 pMat\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Matrix4x4\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"].\cf4 array\cf1 (\cf3 pMat\cf1 ->\cf4 GetMatrix4x4\cf1 ().\cf3 mat_array\cf1 ,16);\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_MATRIX4x3\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Matrix4x3\cf1 * \cf3 pMat\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Matrix4x3\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"].\cf4 array\cf1 (\cf3 pMat\cf1 ->\cf4 GetMatrix4x3\cf1 ().\cf3 mat_array\cf1 ,16);\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_MATRIX3x4\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Matrix3x4\cf1 * \cf3 pMat\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Matrix3x4\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"].\cf4 array\cf1 (\cf3 pMat\cf1 ->\cf4 GetMatrix3x4\cf1 ().\cf3 mat_array\cf1 ,16);\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_MATRIX3x3\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Matrix3x3\cf1 * \cf3 pMat\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Matrix3x3\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"].\cf4 array\cf1 (\cf3 pMat\cf1 ->\cf4 GetMatrix3x3\cf1 ().\cf3 mat_array\cf1 ,9);\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_DWORD\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Dword\cf1 * \cf3 pDword\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Dword\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"] = (\cf2 unsigned\cf1  \cf2 int\cf1 )\cf3 pDword\cf1 ->\cf4 GetDword\cf1 ();\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_INT\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_Int\cf1 * \cf3 pInt\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_Int\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"] = \cf3 pInt\cf1 ->\cf4 GetInt\cf1 ();\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_STRING\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_String\cf1 * \cf3 pString\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_String\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"] = \cf3 pString\cf1 ->\cf4 GetString\cf1 ();\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_VERTEXSHADER\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_VertexShader\cf1 * \cf3 pVS\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_VertexShader\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"] = (\cf2 unsigned\cf1  \cf2 int\cf1 )\cf3 pVS\cf1 ->\cf4 GetVertexShader\cf1 ();\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 case\cf1  \cf2 nv_connections\cf1 ::\cf3 CONNECTIONTYPE_PIXELSHADER\cf1 :\par
+                    \{\par
+                        \cf2 nv_connections\cf1 ::\cf2 IConnection_PixelShader\cf1 * \cf3 pPS\cf1  = \cf2 static_cast\cf1 <\cf2 nv_connections\cf1 ::\cf2 IConnection_PixelShader\cf1 *>(\cf3 pParam\cf1 );\par
+                        \cf3 attr\cf1 ["ConnectionData"] = (\cf2 unsigned\cf1  \cf2 int\cf1 )\cf3 pPS\cf1 ->\cf4 GetPixelShader\cf1 ();\par
+                        \cf2 break\cf1 ;\par
+                    \}\par
+                    \cf2 default\cf1 :\par
+                        \cf3 mArrayLog\cf1 .\cf4 StoreASCII\cf1 ("ERROR: Unknown connection parameter type!\\n");\par
+                        \cf2 break\cf1 ;\par
+                \}\par
+            \}\par
+            /*\par
+            MtlInf.mAttr["CgFX"]["diffuse_map"]     = icgfx->GetDiffuseMap();\par
+            MtlInf.mAttr["CgFX"]["bump_map"]        = icgfx->GetBumpMap();\par
+            MtlInf.mAttr["CgFX"]["cube_env_map"]    = icgfx->GetEnvMap();\par
+            MtlInf.mAttr["CgFX"]["normal_map"]      = icgfx->GetNormalMap();\par
+\par
+            MtlInf.mAttr["CgFX"]["ambient_color"].array(icgfx->GetAmbientColor().vec_array, 4);\par
+            MtlInf.mAttr["CgFX"]["diffuse_color"].array(icgfx->GetDiffuseColor().vec_array, 4);\par
+            MtlInf.mAttr["CgFX"]["specular_color"].array(icgfx->GetSpecularColor().vec_array, 4);\par
+\par
+            MtlInf.mAttr["CgFX"]["shininess"]       = icgfx->GetShininess();\par
+            MtlInf.mAttr["CgFX"]["bump_scale"]      = icgfx->GetBumpScale();\par
+            */\par
+        \}\par
+\cf0\par
+}
+ 

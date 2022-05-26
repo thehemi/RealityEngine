@@ -1,0 +1,34 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nvmax", "nvmax.vcproj", "{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = nvmax.vcproj
+		SccProjectName0 = nvmax
+		SccLocalPath0 = .
+		SccProvider0 = MSSCCI:PushOk\u0020CVS\u0020Proxy
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug Multithreaded DLL = Debug Multithreaded DLL
+		Hybrid = Hybrid
+		Release Multithreaded DLL = Release Multithreaded DLL
+		Release Multithreaded DLL with PDB = Release Multithreaded DLL with PDB
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Hybrid.ActiveCfg = Hybrid|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Hybrid.Build.0 = Hybrid|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded DLL with PDB.ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded DLL with PDB.Build.0 = Release Multithreaded DLL with PDB|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

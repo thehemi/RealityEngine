@@ -1,0 +1,134 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Reality", "..\..\..\..\MaxPlugin\MaxPlugin.vcproj", "{79928499-9732-4664-886F-E1904463FF5F}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nvmax", "nvmax.vcproj", "{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2} = {92C76A51-A651-454A-BD7E-DCC51B8DF0D2}
+		{9FBB6B64-7CC0-4A53-B150-437789C63376} = {9FBB6B64-7CC0-4A53-B150-437789C63376}
+		{79928499-9732-4664-886F-E1904463FF5F} = {79928499-9732-4664-886F-E1904463FF5F}
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF} = {474455DB-5C5E-4B01-A48A-4DF35601B8FF}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nv_gui", "..\..\..\LIBS\src\nv_gui\nv_gui.vcproj", "{9FBB6B64-7CC0-4A53-B150-437789C63376}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nv_math", "..\..\..\LIBS\src\nv_math\nv_math.vcproj", "{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "nv_sys", "..\..\..\LIBS\src\nv_sys\nv_sys.vcproj", "{474455DB-5C5E-4B01-A48A-4DF35601B8FF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Debug Multithreaded = Debug Multithreaded
+		Debug Multithreaded DLL = Debug Multithreaded DLL
+		Hybrid = Hybrid
+		Release = Release
+		Release Multithreaded = Release Multithreaded
+		Release Multithreaded (DLL+Static) = Release Multithreaded (DLL+Static)
+		Release Multithreaded DLL = Release Multithreaded DLL
+		Release Multithreaded DLL with PDB = Release Multithreaded DLL with PDB
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{79928499-9732-4664-886F-E1904463FF5F}.Debug.ActiveCfg = Debug|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Debug.Build.0 = Debug|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Debug Multithreaded.ActiveCfg = Debug Multithreaded|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Debug Multithreaded.Build.0 = Debug Multithreaded|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Hybrid.ActiveCfg = Hybrid|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Hybrid.Build.0 = Hybrid|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release.ActiveCfg = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release.Build.0 = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release Multithreaded.ActiveCfg = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release Multithreaded.Build.0 = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release Multithreaded (DLL+Static).ActiveCfg = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release Multithreaded (DLL+Static).Build.0 = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release Multithreaded DLL.ActiveCfg = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release Multithreaded DLL.Build.0 = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release Multithreaded DLL with PDB.ActiveCfg = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release Multithreaded DLL with PDB.Build.0 = Release|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Debug.ActiveCfg = Debug Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Debug.Build.0 = Debug Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Debug Multithreaded.ActiveCfg = Debug Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Debug Multithreaded.Build.0 = Debug Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Hybrid.ActiveCfg = Hybrid|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Hybrid.Build.0 = Hybrid|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release.ActiveCfg = Release Multithreaded (DLL+Static)|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release.Build.0 = Release Multithreaded (DLL+Static)|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded.ActiveCfg = Release Multithreaded (DLL+Static)|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded.Build.0 = Release Multithreaded (DLL+Static)|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded (DLL+Static).ActiveCfg = Release Multithreaded (DLL+Static)|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded (DLL+Static).Build.0 = Release Multithreaded (DLL+Static)|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded DLL with PDB.ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{B541D5C5-E40D-41E4-A91D-CB2EEF6B5DF7}.Release Multithreaded DLL with PDB.Build.0 = Release Multithreaded DLL with PDB|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Debug.ActiveCfg = Debug Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Debug.Build.0 = Debug Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Debug Multithreaded.ActiveCfg = Debug Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Debug Multithreaded.Build.0 = Debug Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Hybrid.ActiveCfg = Debug Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Hybrid.Build.0 = Debug Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release.ActiveCfg = Release Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release.Build.0 = Release Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release Multithreaded.ActiveCfg = Release Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release Multithreaded.Build.0 = Release Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release Multithreaded (DLL+Static).ActiveCfg = Release Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release Multithreaded (DLL+Static).Build.0 = Release Multithreaded|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release Multithreaded DLL with PDB.ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{9FBB6B64-7CC0-4A53-B150-437789C63376}.Release Multithreaded DLL with PDB.Build.0 = Release Multithreaded DLL with PDB|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Debug.ActiveCfg = Debug|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Debug.Build.0 = Debug|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Debug Multithreaded.ActiveCfg = Debug Multithreaded|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Debug Multithreaded.Build.0 = Debug Multithreaded|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Hybrid.ActiveCfg = Hybrid|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Hybrid.Build.0 = Hybrid|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release.ActiveCfg = Release|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release.Build.0 = Release|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release Multithreaded.ActiveCfg = Release Multithreaded|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release Multithreaded.Build.0 = Release Multithreaded|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release Multithreaded (DLL+Static).ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release Multithreaded (DLL+Static).Build.0 = Release Multithreaded DLL with PDB|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release Multithreaded DLL with PDB.ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{92C76A51-A651-454A-BD7E-DCC51B8DF0D2}.Release Multithreaded DLL with PDB.Build.0 = Release Multithreaded DLL with PDB|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Debug.ActiveCfg = Debug|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Debug.Build.0 = Debug|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Debug Multithreaded.ActiveCfg = Debug Multithreaded|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Debug Multithreaded.Build.0 = Debug Multithreaded|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Debug Multithreaded DLL.ActiveCfg = Debug Multithreaded DLL|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Debug Multithreaded DLL.Build.0 = Debug Multithreaded DLL|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Hybrid.ActiveCfg = Debug Multithreaded|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Hybrid.Build.0 = Debug Multithreaded|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release.ActiveCfg = Release|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release.Build.0 = Release|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release Multithreaded.ActiveCfg = Release Multithreaded|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release Multithreaded.Build.0 = Release Multithreaded|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release Multithreaded (DLL+Static).ActiveCfg = Release Multithreaded|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release Multithreaded (DLL+Static).Build.0 = Release Multithreaded|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release Multithreaded DLL.ActiveCfg = Release Multithreaded DLL|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release Multithreaded DLL.Build.0 = Release Multithreaded DLL|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release Multithreaded DLL with PDB.ActiveCfg = Release Multithreaded DLL with PDB|Win32
+		{474455DB-5C5E-4B01-A48A-4DF35601B8FF}.Release Multithreaded DLL with PDB.Build.0 = Release Multithreaded DLL with PDB|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,1204 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include "editcmd.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PANEL DIALOGEX 0, 0, 292, 245
+STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Reality HLSL Connection Editor"
+MENU IDR_CGFXMENU
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_COLORS DIALOG  0, 0, 392, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "Color Picker"
+FONT 8, "Tahoma"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,335,10,50,14,BS_NOTIFY
+    PUSHBUTTON      "Cancel",IDCANCEL,335,27,50,14,BS_NOTIFY
+    GROUPBOX        "RGB",IDC_STATIC_RGB_RECT,7,7,138,148
+    GROUPBOX        "HSB",IDC_STATIC_HSB_RECT,150,7,180,148
+    GROUPBOX        "RGB Values",IDC_STATIC,6,158,137,48
+    EDITTEXT        IDC_EDIT_RED,14,185,32,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_RED,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,39,185,9,
+                    14
+    EDITTEXT        IDC_EDIT_GREEN,54,185,33,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_GREEN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,79,185,9,
+                    14
+    EDITTEXT        IDC_EDIT_BLUE,99,185,33,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_BLUE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,124,185,9,
+                    14
+    LTEXT           "Red",IDC_STATIC,14,170,14,8
+    LTEXT           "Green",IDC_STATIC,54,170,20,8
+    LTEXT           "Blue",IDC_STATIC,99,170,15,8
+    GROUPBOX        "HSB Values",IDC_STATIC,151,158,177,48
+    EDITTEXT        IDC_EDIT_HUE,159,185,33,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_HUE,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,184,185,9,
+                    14
+    EDITTEXT        IDC_EDIT_SAT,218,185,33,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_SAT,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,242,185,9,
+                    14
+    EDITTEXT        IDC_EDIT_VAL,277,185,31,14,ES_AUTOHSCROLL
+    CONTROL         "Spin1",IDC_SPIN_VAL,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS,300,185,9,
+                    14
+    LTEXT           "Hue",IDC_STATIC,159,170,14,8
+    LTEXT           "Saturation",IDC_STATIC,218,170,33,8
+    LTEXT           "Brightness",IDC_STATIC,277,170,34,8
+    LTEXT           "Old Color",IDC_STATIC,339,51,47,8
+    GROUPBOX        "Static",IDC_STATIC_OLD,337,69,49,31,NOT WS_VISIBLE
+    LTEXT           "New Color",IDC_STATIC,337,105,47,8
+    GROUPBOX        "Static",IDC_STATIC_NEW,335,123,49,31,NOT WS_VISIBLE
+END
+
+IDD_GRID DIALOGEX 0, 0, 192, 126
+STYLE DS_SETFONT | DS_SETFOREGROUND | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+END
+
+IDD_BITMAP_PREVIEW_DLG DIALOG  0, 0, 272, 128
+STYLE DS_SETFONT | WS_CHILD | WS_CLIPSIBLINGS
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Width :",IDC_STATIC,129,13,24,8
+    CONTROL         "",IDC_BITMAP_PREVIEW,"Static",SS_BLACKFRAME,7,7,114,114
+    LTEXT           "Height :",IDC_STATIC,129,24,26,8
+    LTEXT           "Depth :",IDC_STATIC,129,35,24,8
+    LTEXT           "Static",IDC_BITMAP_WIDTH,157,13,58,8
+    LTEXT           "Static",IDC_BITMAP_HEIGHT,157,24,58,8
+    LTEXT           "Static",IDC_BITMAP_FORMAT,158,46,96,8
+    LTEXT           "Static",IDC_BITMAP_DEPTH,157,35,58,8
+    LTEXT           "Format :",IDC_STATIC,129,46,26,8
+    LTEXT           "Static",IDC_BITMAP_COMPRESSION,176,67,82,8
+    LTEXT           "Compression :",IDC_STATIC,129,67,45,8
+    LTEXT           "Static",IDC_BITMAP_CUBE,170,78,48,8
+    LTEXT           "Cube Map :",IDC_STATIC,129,78,38,8
+    LTEXT           "Static",IDC_BITMAP_NUM_MIPMAPS,168,89,48,8
+    LTEXT           "Mip Maps :",IDC_STATIC,129,89,36,8
+    LTEXT           "Static",IDC_BITMAP_BITS_PER_PIXEL,177,57,82,8
+    LTEXT           "Bits Per Pixel :",IDC_STATIC,129,57,46,8
+END
+
+IDD_DEBUGDLG DIALOGEX 0, 0, 186, 246
+STYLE DS_SETFONT | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_NOPARENTNOTIFY
+CAPTION "Console"
+FONT 9, "Fixedsys", 0, 0, 0x1
+BEGIN
+    LISTBOX         IDC_LISTBOX,5,5,175,235,NOT LBS_NOTIFY | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_MAX_SHADER DIALOGEX 0, 0, 216, 235
+STYLE DS_SETFONT | DS_3DLOOK | WS_CHILD | WS_VISIBLE
+EXSTYLE WS_EX_TOOLWINDOW | WS_EX_STATICEDGE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    LTEXT           "Loaded FX:",IDC_STATIC,13,6,58,8
+    PUSHBUTTON      "Connection Editor...",IDC_EDITCONNECTIONS,12,19,90,14
+    GROUPBOX        "Material Mapping Options",IDC_STATIC,12,48,190,180
+    CONTROL         "",IDC_SYNC_DIFFUSE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,90,8,8
+    LTEXT           "Diffuse Map",IDC_STATIC,21,91,55,10
+    LTEXT           "Material -> HLSL",IDC_STATIC,95,63,65,10
+    LTEXT           "Specular Map",IDC_STATIC,21,104,50,10
+    LTEXT           "Gloss Map",IDC_STATIC,21,117,40,10
+    CONTROL         "",IDC_SYNC_SPECULAR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,103,8,8
+    CONTROL         "",IDC_SYNC_BUMP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    121,168,8,8
+    LTEXT           "",IDC_CGFXFILE,67,6,135,8
+    LTEXT           "Bump Map",IDC_STATIC,21,169,55,10
+    CONTROL         "",IDC_SYNC_AMBIENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,77,8,8
+    LTEXT           "Ambient Map",IDC_STATIC,21,78,55,10
+    CONTROL         "",IDC_SYNC_GLOSS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    121,116,8,8
+    LTEXT           "Self-Illumination Map",IDC_STATIC,21,130,70,10
+    CONTROL         "",IDC_SYNC_SELFILLUMINATION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,129,8,8
+    LTEXT           "Opacity Map",IDC_STATIC,21,143,55,10
+    CONTROL         "",IDC_SYNC_OPACITY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,142,8,8
+    LTEXT           "Filter Color",IDC_STATIC,21,156,55,10
+    CONTROL         "",IDC_SYNC_FILTERCOLOR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,155,8,8
+    LTEXT           "Reflection Map",IDC_STATIC,21,182,60,10
+    CONTROL         "",IDC_SYNC_REFLECTION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,181,8,8
+    LTEXT           "Refraction Map",IDC_STATIC,21,195,65,10
+    LTEXT           "Displacement Map",IDC_STATIC,21,208,75,10
+    CONTROL         "",IDC_SYNC_REFRACTION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,194,8,8
+    CONTROL         "",IDC_SYNC_DISPLACEMENT,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,121,207,8,8
+    PUSHBUTTON      "Help...",IDC_HELP,112,19,40,14
+    PUSHBUTTON      "About...",IDC_ABOUT,162,19,41,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PANEL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 238
+    END
+
+    IDD_DIALOG_COLORS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 385
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 203
+    END
+
+    IDD_GRID, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_BITMAP_PREVIEW_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 265
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 121
+    END
+
+    IDD_DEBUGDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 239
+    END
+
+    IDD_MAX_SHADER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 228
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_FPOINT              CURSOR                  "res\\fpoint.cur"
+IDC_SPLITTER            CURSOR                  "res\\spliter.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_CONNECTION          ICON                    "res\\connection.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_CGFXMAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Preview",               ID_FILE_PRINT_PREVIEW
+        MENUITEM "Pa&ge Setup...",              ID_FILE_PAGE_SETUP
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM "&Redo\tCtrl+Y",               ID_EDIT_REDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM "&Delete\tDel",                ID_EDIT_DELETE
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+        MENUITEM SEPARATOR
+        MENUITEM "&Find...\tCtrl+F",            ID_EDIT_FIND
+        MENUITEM "Find &Next\tF3",              ID_EDIT_REPEAT
+        MENUITEM "Find Previous\tShift+F3",     ID_EDIT_FIND_PREVIOUS
+        MENUITEM "R&eplace...\tCtrl+H",         ID_EDIT_REPLACE
+        MENUITEM SEPARATOR
+        MENUITEM "Read &Only",                  ID_READ_ONLY
+        MENUITEM SEPARATOR
+        POPUP "Bookmarks"
+        BEGIN
+            MENUITEM "Clear All bookmarks",         ID_EDIT_CLEAR_BOOKMARKS
+            MENUITEM SEPARATOR
+            MENUITEM "Bookmark 0",                  ID_EDIT_TOGGLE_BOOKMARK0
+            MENUITEM "Bookmark 1",                  ID_EDIT_TOGGLE_BOOKMARK1
+            MENUITEM "Bookmark 2",                  ID_EDIT_TOGGLE_BOOKMARK2
+            MENUITEM "Bookmark 3",                  ID_EDIT_TOGGLE_BOOKMARK3
+            MENUITEM "Bookmark 4",                  ID_EDIT_TOGGLE_BOOKMARK4
+            MENUITEM "Bookmark 5",                  ID_EDIT_TOGGLE_BOOKMARK5
+            MENUITEM "Bookmark 6",                  ID_EDIT_TOGGLE_BOOKMARK6
+            MENUITEM "Bookmark 7",                  ID_EDIT_TOGGLE_BOOKMARK7
+            MENUITEM "Bookmark 8",                  ID_EDIT_TOGGLE_BOOKMARK8
+            MENUITEM "Bookmark 9",                  ID_EDIT_TOGGLE_BOOKMARK9
+        END
+        POPUP "Goto Bookmark"
+        BEGIN
+            MENUITEM "Bookmark 0",                  ID_EDIT_GO_BOOKMARK0
+            MENUITEM "Bookmark 1",                  ID_EDIT_GO_BOOKMARK1
+            MENUITEM "Bookmark 2",                  ID_EDIT_GO_BOOKMARK2
+            MENUITEM "Bookmark 3",                  ID_EDIT_GO_BOOKMARK3
+            MENUITEM "Bookmark 4",                  ID_EDIT_GO_BOOKMARK4
+            MENUITEM "Bookmark 5",                  ID_EDIT_GO_BOOKMARK5
+            MENUITEM "Bookmark 6",                  ID_EDIT_GO_BOOKMARK6
+            MENUITEM "Bookmark 7",                  ID_EDIT_GO_BOOKMARK7
+            MENUITEM "Bookmark 8",                  ID_EDIT_GO_BOOKMARK8
+            MENUITEM "Bookmark 9",                  ID_EDIT_GO_BOOKMARK9
+        END
+        POPUP "More Bookmarks (VC++)"
+        BEGIN
+            MENUITEM "Toggle Bookmark",             ID_EDIT_TOGGLE_BOOKMARK
+            MENUITEM "Next Bookmark",               ID_EDIT_GOTO_NEXT_BOOKMARK
+
+            MENUITEM "Previous bookmark",           ID_EDIT_GOTO_PREV_BOOKMARK
+
+            MENUITEM "Clear All Bookmarks",         ID_EDIT_CLEAR_ALL_BOOKMARKS
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "Backspace at start of line",  ID_EDIT_DISABLEBSATSOL
+        MENUITEM "Drag-and-drop text editing",  ID_EDIT_DISABLEDRAGANDDROP
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+    END
+END
+
+IDR_CONNECTION_EDITOR_OPTIONS MENU 
+BEGIN
+    MENUITEM "Read Only Attributes",        ID_READONLYATTRIBUTES
+    MENUITEM SEPARATOR
+END
+
+IDR_CGFXMENU MENU 
+BEGIN
+    POPUP "&Attributes"
+    BEGIN
+        MENUITEM "Show &Read Only",             ID_READONLYATTRIBUTES
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_CGFX_TOOLBAR_DISABLED BITMAP                  "res\\CgFXToolbard.bmp"
+IDB_CGFX_TOOLBAR        BITMAP                  "res\\CgFXToolbare.bmp"
+IDR_CGFXMAINFRAME       BITMAP                  "res\\CgFXToolbar.bmp"
+IDB_DEFAULT             BITMAP                  "res\\NoPreview.bmp"
+IDB_DEFAULT_SMALL       BITMAP                  "res\\NeedImage.bmp"
+IDB_TWEAKABLE_TYPES_MASK BITMAP                  "tweakabl_mask.bmp"
+IDB_TWEAKABLE_TYPES_DISABLED BITMAP                  "tweakabl_disabled.bmp"
+IDB_TWEAKABLE_TYPES     BITMAP                  "tweakabl.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_CGFXMAINFRAME TOOLBAR  32, 32
+BEGIN
+    BUTTON      ID_READONLYATTRIBUTES
+    BUTTON      ID_EXPANDALL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_FIND_PREVIOUS   "Find the previous occurrence of the specified text\nFind Previous"
+    ID_EDIT_FIND_PREVIOUS2  "Find the previous occurrence of the specified text\nFind Previous"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_CGFXTYPE            "HLSL Editor\n\nHLSL Editor\nFX Files (*.fx)\n.fx\nHLSL.Document\nHLSL Document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_INDICATOR_COL   "========="
+    ID_EDIT_INDICATOR_READ  "Read"
+    ID_EDIT_INDICATOR_CRLF  "========"
+    ID_EDIT_INDICATOR_POSITION "============"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_READONLYATTRIBUTES   "Toggle display for readonly attributes\nToggle Read Only Attrbutes"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PREFABS DIALOGEX 0, 0, 289, 262
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Prefab Manager"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Add To Scene",IDC_ADD,209,7,73,14
+    LISTBOX         IDC_FILES,6,35,78,220,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_FOLDERS,7,7,172,182,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "File Info (Use File->File Properties... to configure)",
+                    IDC_STATIC,89,152,170,8
+    EDITTEXT        IDC_INFO,88,166,194,89,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    GROUPBOX        "Preview",IDC_STATIC,90,25,96,72
+    LTEXT           "Prefabs (.max):",IDC_STATIC,6,24,52,8
+    LTEXT           "NOTE: Under 3dsmax modifiers you can set up a ""proxy"" mesh to represent this one during level design.",
+                    IDC_STATIC,91,101,121,42,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Edit",IDC_PATH,184,7,16,13,BS_ICON | NOT WS_TABSTOP
+    PUSHBUTTON      "Convert To Prefab...",IDC_SAVEASPREFAB,198,26,84,15,
+                    WS_DISABLED
+    PUSHBUTTON      "Your request here!",IDC_SAVETOMAX,198,44,84,15,
+                    WS_DISABLED | WS_GROUP
+END
+
+IDD_PICKOBJ DIALOG  0, 0, 186, 127
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pick Object to XRef"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,95,106,50,14
+    LISTBOX         IDC_LIST_NODES,7,7,172,56,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_HSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "Add as proxy",IDC_CHK_PROXY,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,69,172,11
+    CONTROL         "Ignore animation",IDC_CHK_NOANIM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,85,172,11
+END
+
+IDD_OBJECT_PROPERTIES DIALOGEX 0, 0, 288, 303
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Object Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Edit",IDC_EDITSCRIPT,189,7,16,13,BS_ICON | NOT 
+                    WS_TABSTOP
+    COMBOBOX        IDC_APPDATA_CLASSES,28,7,158,136,CBS_DROPDOWNLIST | 
+                    CBS_AUTOHSCROLL | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Choose scripts folder...",IDC_SETSCRIPTFOLDER,208,7,16,
+                    13,BS_ICON | NOT WS_TABSTOP
+    PUSHBUTTON      "Reload All",IDC_REFRESHSCRIPTS,227,7,16,13,BS_ICON
+    CONTROL         "",IDC_LISTVIEW,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | 
+                    LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,28,274,151
+    LTEXT           "Class:",IDC_STATIC,7,9,20,8
+    EDITTEXT        IDC_COMMENTS,7,237,274,59,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    LTEXT           "Entity Description:",IDC_STATIC,7,225,66,8
+    PUSHBUTTON      "Create",IDC_SPAWNENTITY,247,7,34,13
+END
+
+IDD_MAPSETTINGS DIALOGEX 0, 0, 276, 294
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Map settings..."
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Skybox File:",IDC_STATIC,7,9,40,8
+    EDITTEXT        IDC_SKYBOX,55,7,90,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE_SKYBOX,149,7,12,14
+    CONTROL         "",IDC_CLIPPLANE,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,55,30,117,12
+    LTEXT           "Far Clip Plane:",IDC_STATIC,7,31,47,8
+    CONTROL         "",IDC_FOGSTART,"msctls_trackbar32",TBS_BOTH | 
+                    TBS_NOTICKS | WS_TABSTOP,55,61,115,12
+    LTEXT           "Fog Start:",IDC_STATIC,7,61,34,8
+    LTEXT           "50M",IDC_STATIC,49,73,18,8
+    LTEXT           "5000M",IDC_STATIC,157,73,22,8
+    LTEXT           "50M",IDC_STATIC,49,42,14,8
+    LTEXT           "5000M",IDC_STATIC,157,42,22,8
+    CONTROL         "User1",IDC_COLOR_SWATCH,"ColorSwatch",WS_TABSTOP,49,85,
+                    26,13
+    LTEXT           "Fog Color:",IDC_STATIC,7,87,34,8
+    EDITTEXT        IDC_SCENEDESC,7,228,262,59,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_VSCROLL
+    LTEXT           "Scene Description:",IDC_STATIC,7,219,65,8
+    EDITTEXT        IDC_MINIMAP,63,103,90,12,ES_AUTOHSCROLL
+    LTEXT           "MiniMap Image:",IDC_STATIC,9,104,51,8
+    PUSHBUTTON      "...",IDC_BROWSE_MINIMAP,153,103,12,14
+    LTEXT           "Scale:",IDC_STATIC,173,103,20,8
+    EDITTEXT        IDC_MINIMAP_SCALE,193,102,29,15,ES_AUTOHSCROLL
+    LTEXT           "Meters/Pixel",IDC_STATIC,223,104,44,9
+    EDITTEXT        IDC_FOGVALUE,180,60,30,15,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_CLIPVALUE,180,30,30,15,ES_AUTOHSCROLL | ES_READONLY
+    LTEXT           "SH Image Probe:",IDC_STATIC,7,126,102,8
+    EDITTEXT        IDC_SH_CUBEMAP,63,124,90,12,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE_MINIMAP2,153,103,12,14
+    PUSHBUTTON      "...",IDC_BROWSE_CUBEMAP,153,124,12,14
+    CONTROL         "Force Defaults on all meshes",IDC_GLOBALOVERRIDE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,139,183,107,10
+    LTEXT           "Percent of rays:",IDC_NUM_RAYS_TEXT,21,165,53,8,
+                    SS_NOTIFY
+    EDITTEXT        IDC_PER_RAYS_EDIT,77,163,27,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PER_RAYS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,94,162,11,14
+    LTEXT           "Percent of bounces:",IDC_NUM_BOUNCES_TEXT,10,182,65,8,
+                    SS_NOTIFY
+    EDITTEXT        IDC_PER_BOUNCES_EDIT,77,180,27,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_PER_BOUNCES_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,94,179,11,14
+    LTEXT           "Percent of Texture:",IDC_TEXTURE_SIZE_TEXT,11,198,64,8,
+                    SS_NOTIFY
+    COMBOBOX        IDC_TEXTURE_PERCENT_COMBO,77,196,39,85,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Strip Scene/Mesh Settings",IDC_STRIPSCENE,177,7,92,14
+    LTEXT           "%",IDC_STATIC,107,180,10,9
+    LTEXT           "%",IDC_STATIC,107,164,10,9
+    PUSHBUTTON      "Edit Defaults...",IDC_EDIT_DEFAULTS,139,199,58,12
+    PUSHBUTTON      "Reload Defaults",IDC_RELOAD_DEFAULTS,201,199,60,12
+    GROUPBOX        "Global PRT Percentage Control",IDC_STATIC,7,151,115,66
+    GROUPBOX        "Global PRT Defaults",IDC_STATIC,128,151,141,66
+    LTEXT           "Defaults are used on meshes that do not define custom PRT settings",
+                    IDC_STATIC,134,161,131,19,SS_SUNKEN
+END
+
+IDD_HELP DIALOGEX 0, 0, 207, 51
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Help"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Visit Online TWiki Help!",IDC_LINK,60,36,82,8
+    LTEXT           "e-mail me!",IDC_EMAIL,165,15,34,8
+    LTEXT           "Plugins tools are by Tim Johnson. If you find any problems or have any feature requests, please",
+                    IDC_STATIC,8,7,155,16,0,WS_EX_TRANSPARENT
+END
+
+IDD_EXPORT DIALOGEX 0, 0, 280, 241
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Game Export..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "...",IDC_BROWSE_UNCOMPILED,252,164,11,14
+    EDITTEXT        IDC_UNCOMPILED_PATH,156,164,90,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_MODEL_FILENAME,13,86,79,13,ES_AUTOHSCROLL
+    LTEXT           "Models folder (.xml):",IDC_STATIC,156,151,63,8,0,
+                    WS_EX_TRANSPARENT
+    GROUPBOX        "Model",IDC_STATIC,7,65,138,62
+    CONTROL         "Save selected",IDC_SAVESELECTED_MODEL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,103,61,10
+    PUSHBUTTON      "...",IDC_BROWSE_UNCOMPILED2,252,132,11,14
+    PUSHBUTTON      "Save",IDC_SAVELEVEL,99,27,41,14
+    EDITTEXT        IDC_UNCOMPILED_PATH2,156,132,90,13,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,16,16,22,8
+    EDITTEXT        IDC_LEVEL_FILENAME,15,27,79,13,ES_AUTOHSCROLL
+    LTEXT           "Maps folder (.xml):",IDC_STATIC,156,119,58,8,0,
+                    WS_EX_TRANSPARENT
+    PUSHBUTTON      "...",IDC_BROWSEFORGAME,253,71,11,14,WS_GROUP
+    CONTROL         "Save selected",IDC_SAVESELECTED_LEVEL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,45,61,10
+    GROUPBOX        "Animation",IDC_STATIC,7,130,138,104
+    LTEXT           "Animations Folder:",IDC_STATIC,156,90,58,8
+    EDITTEXT        IDC_ANIMATION_PATH,156,101,90,13,ES_AUTOHSCROLL
+    LTEXT           "Name:",IDC_STATIC,13,146,22,8
+    EDITTEXT        IDC_ANIMATION_FILENAME,13,157,90,13,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE_ANIMATION,252,101,11,14
+    PUSHBUTTON      "Save",IDC_SAVEANIMATION,13,175,54,14,WS_DISABLED
+    LTEXT           ".anm",IDC_STATIC,103,162,16,8
+    CONTROL         "Looping animation",IDC_ISLOOPING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,194,73,10
+    CONTROL         "Text (Slower)",IDC_TEXT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,155,31,57,10
+    CONTROL         "Binary &Compressed",IDC_BINARYCOMPRESSED,"Button",
+                    BS_AUTORADIOBUTTON | WS_DISABLED,155,18,76,10
+    EDITTEXT        IDC_SAMPLERATE,97,208,27,14,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER | WS_DISABLED
+    GROUPBOX        "Intermediate Data Format",IDC_STATIC,149,7,124,37
+    LTEXT           "Animation Sampling Rate:",IDC_STATIC,13,210,82,11
+    EDITTEXT        IDC_GAME_LOCATION,157,71,92,13,ES_AUTOHSCROLL
+    LTEXT           "Game Location:",IDC_STATIC,157,60,51,8
+    GROUPBOX        "Level",IDC_STATIC,6,6,138,53
+    GROUPBOX        "Files && Folders",IDC_STATIC,148,44,126,190
+    CONTROL         "Save selected",IDC_SAVESELECTED_ANIMATION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,75,178,61,10
+    PUSHBUTTON      "Save",IDC_SAVEMODEL,98,86,41,14
+    LTEXT           "Name:",IDC_STATIC,14,75,22,8
+END
+
+IDD_DLGEXPORT DIALOG  0, 0, 279, 209
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION """Export"" Results"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,114,188,50,14
+    EDITTEXT        IDC_EDIT_EXPRES,7,19,265,155,ES_MULTILINE | WS_VSCROLL | 
+                    WS_HSCROLL
+END
+
+IDD_SH DIALOGEX 0, 0, 288, 342
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Spherical Harmonics Setup"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Edit Indoor blockers...",IDC_ADDINBLOCKER,100,17,85,14
+    PUSHBUTTON      "Edit Outdoor Blockers...",IDC_ADDOUTBLOCKER,100,34,85,
+                    14,WS_DISABLED
+    GROUPBOX        "PRT settings",IDC_PRT_SETTINGS_TEXT,7,73,274,94,
+                    BS_NOTIFY
+    LTEXT           "Order of spherical harmonic approximation:",
+                    IDC_ORDER_TEXT,19,100,139,8,SS_NOTIFY
+    CONTROL         "",IDC_ORDER_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,163,100,97,11
+    LTEXT           "Min: 2",IDC_STATIC,157,113,20,8
+    LTEXT           "Max: 6",IDC_STATIC,249,113,23,8
+    LTEXT           "Number of rays:",IDC_NUM_RAYS_TEXT,29,128,53,8,
+                    SS_NOTIFY
+    EDITTEXT        IDC_NUM_RAYS_EDIT,87,127,39,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_NUM_RAYS_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_ALIGNRIGHT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,127,126,11,14
+    LTEXT           "Number of bounces:",IDC_NUM_BOUNCES_TEXT,17,146,66,8,
+                    SS_NOTIFY
+    EDITTEXT        IDC_NUM_BOUNCES_EDIT,87,144,39,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_NUM_BOUNCES_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,127,143,11,14
+    LTEXT           "Length Multiplier (Advanced):",IDC_LENGTH_SCALE_TEXT,
+                    135,208,95,8,SS_NOTIFY
+    EDITTEXT        IDC_LENGTH_SCALE_EDIT,233,206,39,12,ES_AUTOHSCROLL
+    CONTROL         "Enable adaptive mesh tessellation",IDC_ADAPTIVE_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,157,130,126,10
+    DEFPUSHBUTTON   "Adaptive Mesh Settings...",IDC_ADAPTIVE_SETTINGS,157,
+                    146,102,14
+    CONTROL         "Enable subsurface scattering",IDC_SUBSURF_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,19,223,109,10
+    CONTROL         "3 color channels (RGB)",IDC_SPECTRAL_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,142,222,88,10
+    LTEXT           "Predefined Material:",IDC_PREDEF_TEXT,73,238,66,8,
+                    SS_NOTIFY
+    COMBOBOX        IDC_PREDEF_COMBO,143,236,126,63,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Relative index of refraction:",IDC_REFRACTION_TEXT,47,
+                    257,91,8,SS_NOTIFY
+    EDITTEXT        IDC_REFRACTION_EDIT,143,254,39,12,ES_AUTOHSCROLL
+    LTEXT           "Selected:\nSH Group:\nIn Blockers:\nOut Blockers:",
+                    IDC_SHINFO,12,18,84,37,0,WS_EX_CLIENTEDGE
+    CONTROL         "Uses Spherical Harmonics Lighting",IDC_ENABLESH,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,6,126,10
+    LTEXT           "Red",IDC_RED_TEXT,155,270,14,8,SS_NOTIFY
+    LTEXT           "Green",IDC_GREEN_TEXT,196,270,20,8,SS_NOTIFY
+    LTEXT           "Blue",IDC_BLUE_TEXT,243,270,14,8,SS_NOTIFY
+    LTEXT           "Diffuse reflectance coefficient:",IDC_REFLECTANCE_TEXT,
+                    38,282,100,8,SS_NOTIFY
+    EDITTEXT        IDC_REFLECTANCE_R_EDIT,143,280,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REFLECTANCE_G_EDIT,187,280,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_REFLECTANCE_B_EDIT,231,280,39,12,ES_AUTOHSCROLL
+    LTEXT           "Reduced scattering coefficient:",IDC_SCATTERING_TEXT,37,
+                    299,101,8,SS_NOTIFY
+    EDITTEXT        IDC_SCATTERING_R_EDIT,143,297,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SCATTERING_G_EDIT,187,297,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_SCATTERING_B_EDIT,231,297,39,12,ES_AUTOHSCROLL
+    LTEXT           "Absorption coefficient:",IDC_ABSORPTION_TEXT,64,316,74,
+                    8,SS_NOTIFY
+    EDITTEXT        IDC_ABSORPTION_R_EDIT,143,314,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ABSORPTION_G_EDIT,187,314,39,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ABSORPTION_B_EDIT,231,314,39,12,ES_AUTOHSCROLL
+    GROUPBOX        "Material settings",IDC_MATERIAL_SETTINGS_TEXT,7,190,275,
+                    146,BS_NOTIFY
+    LTEXT           "Texture size:",IDC_TEXTURE_SIZE_TEXT,189,85,43,8,
+                    SS_NOTIFY
+    COMBOBOX        IDC_TEXTURE_SIZE_COMBO,233,84,48,85,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Enable Per-Pixel",IDC_PERPIXEL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,117,84,70,10
+    CONTROL         "Use Custom PRT Settings",IDC_USECUSTOM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,16,63,100,10
+    PUSHBUTTON      "Select All Blockers",IDC_SELECTALL,207,7,74,14
+END
+
+IDD_ADAPTIVE_OPTIONS DIALOGEX 0, 0, 208, 241
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Adaptive PRT Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "Robust mesh refine",IDC_PRT_SETTINGS_TEXT,9,9,192,58,
+                    BS_NOTIFY
+    CONTROL         "Enable robust mesh refine",
+                    IDC_ENABLE_ROBUST_MESH_REFINE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,22,20,99,10
+    LTEXT           "Min edge length:",IDC_RMR_MIN_EDGE_TEXT,49,34,54,8,
+                    SS_NOTIFY
+    EDITTEXT        IDC_RMR_MIN_EDGE_EDIT,106,32,59,12,ES_AUTOHSCROLL
+    LTEXT           "Max subdivision level:",IDC_RMR_MAX_SUBD_TEXT,33,48,70,
+                    8,SS_NOTIFY
+    EDITTEXT        IDC_RMR_MAX_SUBD_EDIT,106,46,59,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_RMR_MAX_SUBD_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,167,45,11,14
+    GROUPBOX        "Adaptive direct lighting",IDC_PRT_SETTINGS_TEXT2,9,68,
+                    192,74,BS_NOTIFY
+    CONTROL         "Enable adaptive direct lighting",
+                    IDC_ENABLE_ADAPTIVE_DIRECT_LIGHTING,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,22,79,112,10
+    LTEXT           "Subdivision threshold:",IDC_DL_SUBD_THRESHOLD_TEXT,32,
+                    95,71,8,SS_NOTIFY
+    EDITTEXT        IDC_DL_SUBD_THRESHOLD_EDIT,106,92,59,12,ES_AUTOHSCROLL
+    LTEXT           "Min edge length:",IDC_DL_MIN_EDGE_TEXT,49,108,54,8,
+                    SS_NOTIFY
+    EDITTEXT        IDC_DL_MIN_EDGE_EDIT,106,106,59,12,ES_AUTOHSCROLL
+    LTEXT           "Max subdivision level:",IDC_DL_MAX_SUBD_TEXT,33,121,70,
+                    10,SS_NOTIFY
+    EDITTEXT        IDC_DL_MAX_SUBD_EDIT,106,120,59,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_DL_MAX_SUBD_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,167,119,11,14
+    GROUPBOX        "Adaptive bounce",IDC_PRT_SETTINGS_TEXT3,9,143,192,74,
+                    BS_NOTIFY
+    CONTROL         "Enable adaptive bounce",IDC_ENABLE_ADAPTIVE_BOUNCE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,22,154,93,10
+    LTEXT           "Subdivision threshold:",IDC_AB_SUBD_THRESHOLD_TEXT,32,
+                    170,71,8,SS_NOTIFY
+    EDITTEXT        IDC_AB_SUBD_THRESHOLD_EDIT,106,167,59,12,ES_AUTOHSCROLL
+    LTEXT           "Min edge length:",IDC_AB_MIN_EDGE_TEXT,49,183,54,8,
+                    SS_NOTIFY
+    EDITTEXT        IDC_AB_MIN_EDGE_EDIT,106,181,59,12,ES_AUTOHSCROLL
+    LTEXT           "Max subdivision level:",IDC_AB_MAX_SUBD_TEXT,33,196,70,
+                    10,SS_NOTIFY
+    EDITTEXT        IDC_AB_MAX_SUBD_EDIT,106,195,59,12,ES_AUTOHSCROLL
+    CONTROL         "",IDC_AB_MAX_SUBD_SPIN,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_ALIGNRIGHT | UDS_AUTOBUDDY | 
+                    UDS_ARROWKEYS | UDS_NOTHOUSANDS,167,194,11,14
+    DEFPUSHBUTTON   "&OK",IDOK,151,220,50,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PREFABS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 282
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 255
+    END
+
+    IDD_PICKOBJ, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+
+    IDD_OBJECT_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 296
+        HORZGUIDE, 20
+    END
+
+    IDD_MAPSETTINGS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 269
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 287
+    END
+
+    IDD_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 200
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 44
+    END
+
+    IDD_EXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 274
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+
+    IDD_DLGEXPORT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 272
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 202
+    END
+
+    IDD_SH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 281
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 335
+        HORZGUIDE, 7
+    END
+
+    IDD_ADAPTIVE_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 201
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 234
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_OPEN                ICON                    "iconOpen.ico"
+IDI_EDIT                ICON                    "icoEdit.ico"
+IDI_REFRESH             ICON                    "refreshScripts.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_HSB          BITMAP                  "res\\CCHSB.bmp"
+IDB_BITMAP_RGB          BITMAP                  "res\\ccrgb.bmp"
+IDB_BITMAP1             BITMAP                  "untitled.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_CGFXMAINFRAME ACCELERATORS 
+BEGIN
+    "0",            ID_EDIT_TOGGLE_BOOKMARK0, VIRTKEY, CONTROL, NOINVERT
+    "0",            ID_EDIT_GO_BOOKMARK0,   VIRTKEY, ALT, NOINVERT
+    "1",            ID_EDIT_TOGGLE_BOOKMARK1, VIRTKEY, CONTROL, NOINVERT
+    "1",            ID_EDIT_GO_BOOKMARK1,   VIRTKEY, ALT, NOINVERT
+    "2",            ID_EDIT_TOGGLE_BOOKMARK2, VIRTKEY, CONTROL, NOINVERT
+    "2",            ID_EDIT_GO_BOOKMARK2,   VIRTKEY, ALT, NOINVERT
+    "3",            ID_EDIT_TOGGLE_BOOKMARK3, VIRTKEY, CONTROL, NOINVERT
+    "3",            ID_EDIT_GO_BOOKMARK3,   VIRTKEY, ALT, NOINVERT
+    "4",            ID_EDIT_TOGGLE_BOOKMARK4, VIRTKEY, CONTROL, NOINVERT
+    "4",            ID_EDIT_GO_BOOKMARK4,   VIRTKEY, ALT, NOINVERT
+    "5",            ID_EDIT_TOGGLE_BOOKMARK5, VIRTKEY, CONTROL, NOINVERT
+    "5",            ID_EDIT_GO_BOOKMARK5,   VIRTKEY, ALT, NOINVERT
+    "6",            ID_EDIT_TOGGLE_BOOKMARK6, VIRTKEY, CONTROL, NOINVERT
+    "6",            ID_EDIT_GO_BOOKMARK6,   VIRTKEY, ALT, NOINVERT
+    "7",            ID_EDIT_TOGGLE_BOOKMARK7, VIRTKEY, CONTROL, NOINVERT
+    "7",            ID_EDIT_GO_BOOKMARK7,   VIRTKEY, ALT, NOINVERT
+    "8",            ID_EDIT_TOGGLE_BOOKMARK8, VIRTKEY, CONTROL, NOINVERT
+    "8",            ID_EDIT_GO_BOOKMARK8,   VIRTKEY, ALT, NOINVERT
+    "9",            ID_EDIT_TOGGLE_BOOKMARK9, VIRTKEY, CONTROL, NOINVERT
+    "9",            ID_EDIT_GO_BOOKMARK9,   VIRTKEY, ALT, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_CHAR_BOLD,           VIRTKEY, CONTROL, NOINVERT
+    "B",            ID_CHAR_BOLD,           VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "E",            ID_PARA_CENTER,         VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "F",            ID_EDIT_FIND,           VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "H",            ID_EDIT_REPLACE,        VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_CHAR_ITALIC,         VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_CHAR_ITALIC,         VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "L",            ID_PARA_LEFT,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "R",            ID_PARA_RIGHT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_CHAR_UNDERLINE,      VIRTKEY, CONTROL, NOINVERT
+    "U",            ID_CHAR_UNDERLINE,      VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_DELETE_BACK,    VIRTKEY, NOINVERT
+    VK_BACK,        ID_EDIT_DELETE_WORD_BACK, VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_DELETE,         VIRTKEY, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_DOWN,        ID_EDIT_LINE_DOWN,      VIRTKEY, NOINVERT
+    VK_DOWN,        ID_EDIT_SCROLL_DOWN,    VIRTKEY, CONTROL, NOINVERT
+    VK_DOWN,        ID_EDIT_EXT_LINE_DOWN,  VIRTKEY, SHIFT, NOINVERT
+    VK_END,         ID_EDIT_LINE_END,       VIRTKEY, NOINVERT
+    VK_END,         ID_EDIT_TEXT_END,       VIRTKEY, CONTROL, NOINVERT
+    VK_END,         ID_EDIT_EXT_LINE_END,   VIRTKEY, SHIFT, NOINVERT
+    VK_END,         ID_EDIT_EXT_TEXT_END,   VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_NEXT_BOOKMARK, VIRTKEY, NOINVERT
+    VK_F2,          ID_EDIT_TOGGLE_BOOKMARK, VIRTKEY, CONTROL, NOINVERT
+    VK_F2,          ID_EDIT_GOTO_PREV_BOOKMARK, VIRTKEY, SHIFT, NOINVERT
+    VK_F2,          ID_EDIT_CLEAR_ALL_BOOKMARKS, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F3,          ID_EDIT_REPEAT,         VIRTKEY, NOINVERT
+    VK_F3,          ID_EDIT_FIND_PREVIOUS,  VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_EDIT_HOME,           VIRTKEY, NOINVERT
+    VK_HOME,        ID_EDIT_TEXT_BEGIN,     VIRTKEY, CONTROL, NOINVERT
+    VK_HOME,        ID_EDIT_EXT_HOME,       VIRTKEY, SHIFT, NOINVERT
+    VK_HOME,        ID_EDIT_EXT_TEXT_BEGIN, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_INSERT,      ID_EDIT_SWITCH_OVRMODE, VIRTKEY, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_CHAR_LEFT,      VIRTKEY, NOINVERT
+    VK_LEFT,        ID_EDIT_WORD_LEFT,      VIRTKEY, CONTROL, NOINVERT
+    VK_LEFT,        ID_EDIT_EXT_CHAR_LEFT,  VIRTKEY, SHIFT, NOINVERT
+    VK_LEFT,        ID_EDIT_EXT_WORD_LEFT,  VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_NEXT,        ID_EDIT_PAGE_DOWN,      VIRTKEY, NOINVERT
+    VK_NEXT,        ID_EDIT_EXT_PAGE_DOWN,  VIRTKEY, SHIFT, NOINVERT
+    VK_PAUSE,       ID_VIEW_FULL_SCREEN,    VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_EDIT_PAGE_UP,        VIRTKEY, NOINVERT
+    VK_PRIOR,       ID_EDIT_EXT_PAGE_UP,    VIRTKEY, SHIFT, NOINVERT
+    VK_RETURN,      ID_OLE_EDIT_PROPERTIES, VIRTKEY, ALT, NOINVERT
+    VK_RIGHT,       ID_EDIT_CHAR_RIGHT,     VIRTKEY, NOINVERT
+    VK_RIGHT,       ID_EDIT_WORD_RIGHT,     VIRTKEY, CONTROL, NOINVERT
+    VK_RIGHT,       ID_EDIT_EXT_CHAR_RIGHT, VIRTKEY, SHIFT, NOINVERT
+    VK_RIGHT,       ID_EDIT_EXT_WORD_RIGHT, VIRTKEY, SHIFT, CONTROL, 
+                                                    NOINVERT
+    VK_TAB,         ID_EDIT_TAB,            VIRTKEY, NOINVERT
+    VK_TAB,         ID_EDIT_UNTAB,          VIRTKEY, SHIFT, NOINVERT
+    VK_UP,          ID_EDIT_LINE_UP,        VIRTKEY, NOINVERT
+    VK_UP,          ID_EDIT_SCROLL_UP,      VIRTKEY, CONTROL, NOINVERT
+    VK_UP,          ID_EDIT_EXT_LINE_UP,    VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Y",            ID_EDIT_REDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include ""editcmd.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\nvgui.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_NOITEMSEL           "No item selected"
+    IDS_FALSE               "false"
+    IDS_TRUE                "true"
+    IDS_SELFORINFO          "Select an item to see its description"
+    IDC_PROPERTYTREE        "The Property Tree control"
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_CGFXMAINFRAME       "HLSL Editor\n\nHLSL Editor\nFX Files (*.fx)\n.fx\nHLSL.Document\nHLSL Document"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_NAME                "Name"
+    IDS_VALUE               "Value"
+    IDS_TYPE                "Type"
+    IDS_LIBDESCRIPTION      "Game Utilities"
+    IDS_PARAMETERS          "Parameters"
+    IDS_ACTION1_DESC        "Add prefab..."
+    IDS_ACTION2_DESC        "Convert to prefab..."
+    IDS_ACTION3_DESC        "Add entity..."
+    IDS_ACTION4_DESC        "Edit properties..."
+    IDS_ACTION5_DESC        "Export..."
+    IDS_FPACTIONS_CATEGORY  "Game Menu"
+    IDS_CLASS_NAME          "Game Menu"
+    IDS_CLASS_CATEGORY      "Game Utilities"
+    IDS_ACTION6_DESC        "Scene settings..."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ACTION7_DESC        "Prefabs..."
+    IDS_ACTION8_DESC        "Entities..."
+    IDS_ERR1                "Please select one (and only one) scene object to convert"
+    IDS_ERRTITLE            "Prefab Manager : Error"
+    IDS_ERR2                "Invalid Node selected"
+    IDS_ERR3                "Please select node(s) to convert to XRef Scene"
+    IDS_ACTION9_DESC        "Help..."
+    IDS_PARAMS              "Viewport Shader - HLSL"
+    IDS_SPIN                "Spin"
+    IDS_COORDS              "Coordinates"
+    IDS_PSCATEGORY          "DXViewportEffect"
+    IDS_VSCATEGORY          "Vertex Shader"
+    IDS_VSCLASS_NAME        "HLSL Viewport Shader"
+    IDS_VSPARAMS            "Reality HLSL"
+    IDS_BPSCLASS_NAME       "Reality Shader Material"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAPFILENAME         "Map"
+    IDS_VSFILENAME          "Vertex Shader File"
+    IDS_TEXTURE_TYPES       "All Image Formats (.tga; .dds; .png; .jpg; .bmp; .tiff;)|*.tga;*.dds;*.png;*.jpg;*.bmp;*.tiff|Targa Files (*.tga)|*.tga|DDS Files(*.dds)|*.dds|PNG Files (*.png)|*.png|Jpeg Files (*.jpg)|*.jpg|Bitmap Files (*.bmp)|*.bmp|All Files (*.*)|*.*|"
+    IDS_MAT_STATE           "MaterialState"
+    IDS_BUTTON              "Button"
+    IDS_COLOR               "Color"
+    IDS_UV                  "UV"
+    IDS_BUMP_SCALE          "Bump Scale"
+    IDS_TEX_SCALE           "Detail Blend"
+    IDS_COLOR_AMB           "Ambient"
+    IDS_COLOR_DIFF          "Diffuse"
+    IDS_COLOR_SPEC          "Specular"
+    IDS_ALPHA               "Alpha"
+    IDS_ACTION10_DESC       "Spherical Harmonics..."
+    IDS_CLASS_NAME2         "Emulator"
+    IDS_CATEGORY            "Viewport Shader Emulator"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_MAP_DIFFUSE1        "MappingDiffuse1"
+    IDS_MAP_DIFFUSE2        "MappingDiffuse2"
+    IDS_MAP_SPECULAR        "MappingSpecular"
+    IDS_MAP_BUMP            "MappingBump"
+    IDS_SYNC                "Sync"
+    IDS_ACUBIC_NAME         "Cubic map"
+    IDS_SELECT_CUBIC        "Select Cubic Map file"
+    IDS_BITMAP_NONE         "None"
+    IDS_DDS_FILTER_NAME     "D3D (*.dds)"
+    IDS_DDS_FILTER_DESC     "*.dds"
+    IDS_FILE_REPLACE        "allready exists.\nDo you want to replace it?"
+    IDS_SAVE_AS             "Save As"
+    IDS_MIX_SCALE           "mix"
+    IDS_REFLECT_SCALE       "reflect amount"
+    IDS_CGFX                "HLSL"
+    IDS_TECHNIQUE           "Technique"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CONNECTIONS         "Edit Connections..."
+    IDS_DYNMATFLOAT_DATA    "Dynamic Float Data"
+    IDS_DYNMATFILENAME_DATA "Dynamic filename data"
+    IDS_DYNMATINT_DATA      "Dynamic int data"
+    IDS_SYNC_DIFFUSE        "Sync Diffuse"
+    IDS_SYNC_SPECULAR       "Sync Specular"
+    IDS_SYNC_BUMP           "Sync Bump"
+    IDS_SYNC_AMBIENT        "Sync Ambient"
+    IDS_SYNC_GLOSS          "Sync Gloss"
+    IDS_SYNC_SELFILLUMINATION "Sync Self Illumination"
+    IDS_SYNC_OPACITY        "Sync Opacity"
+    IDS_SYNC_FILTERCOLOR    "Sync Filter Color"
+    IDS_SYNC_REFLECTION     "Sync Reflection"
+    IDS_SYNC_REFRACTION     "Sync Refraction"
+    IDS_SYNC_DISPLACEMENT   "Sync Displacement"
+    IDS_TECHNIQUENAME       "Technique Name"
+END
+
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\nvgui.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

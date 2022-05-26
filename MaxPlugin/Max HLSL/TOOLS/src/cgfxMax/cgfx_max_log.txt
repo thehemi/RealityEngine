@@ -1,0 +1,15 @@
+22/11/2002
+
+Current version (1) features:
+- Auto - syncing of stdmaterial bumpmap to normal map with auto-normal map generation.
+- Syncing of other stdmaterial texture files to CgfX equivalents.
+- dds file support
+- Remapping of CgFX parameters from one effect to another when changing
+- Reload of current CgFX parameters and remapping to changed .fx file if appropriate.
+- Save/Reload of lighting information.
+- Save/Reload of material information.
+- Drop-down box for light selection, dynamically updated as lights are added/removed.
+- Various UI improvements, such as vector/matrix editing, sliders, color picker, etc.
+- Dynamic UI, synced to the current .fx file
+- Realtime editing of CgFX tweakables in .fx files and automatic rebuild of the dynamic UI.
+- Texture browser for .dds files.

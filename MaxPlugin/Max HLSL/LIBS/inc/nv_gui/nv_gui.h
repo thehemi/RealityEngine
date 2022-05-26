@@ -1,0 +1,44 @@
+/*********************************************************************NVMH4****
+Path:  SDK\LIBS\inc\nv_gui
+File:  nv_gui.h
+
+Copyright NVIDIA Corporation 2002
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THIS SOFTWARE IS PROVIDED
+*AS IS* AND NVIDIA AND ITS SUPPLIERS DISCLAIM ALL WARRANTIES, EITHER EXPRESS
+OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY
+AND FITNESS FOR A PARTICULAR PURPOSE.  IN NO EVENT SHALL NVIDIA OR ITS SUPPLIERS
+BE LIABLE FOR ANY SPECIAL, INCIDENTAL, INDIRECT, OR CONSEQUENTIAL DAMAGES
+WHATSOEVER (INCLUDING, WITHOUT LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS,
+BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, OR ANY OTHER PECUNIARY LOSS)
+ARISING OUT OF THE USE OF OR INABILITY TO USE THIS SOFTWARE, EVEN IF NVIDIA HAS
+BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+
+
+Comments:
+
+
+******************************************************************************/
+
+#ifndef __NV_GUI_H
+#define __NV_GUI_H
+
+#include "nv_sys\nv_sys.h"
+#include "invgui.h"
+#include "invguidata.h"
+
+#include "invdebugconsole.h"
+
+// Useful class implementations of the data item interfaces
+#include "nvguidata.h"
+
+// {376B5F43-4A9B-4319-940A-378535ECE939}
+static const nv_sys::NVGUID CLSID_NVGUI = 
+{ 0x376b5f43, 0x4a9b, 0x4319, { 0x94, 0xa, 0x37, 0x85, 0x35, 0xec, 0xe9, 0x39 } };
+
+// {9B791245-7222-4205-A0EA-7137A874BF07}
+static const nv_sys::NVGUID CLSID_NVDebugConsole = 
+{ 0x9b791245, 0x7222, 0x4205, { 0xa0, 0xea, 0x71, 0x37, 0xa8, 0x74, 0xbf, 0x7 } };
+
+
+#endif

@@ -1,0 +1,28 @@
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Cry Havoc Dedicated", "Cry Havoc Dedicated.vcproj", "{C5BE7015-CC6C-4B7E-BE8C-D7AF0A6F7517}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProviderRegKey = SOFTWARE\PushOk Software\CVSSCC
+		SccProjectUniqueName0 = Cry\u0020Havoc\u0020Dedicated.vcproj
+		SccProjectName0 = cryhavoc
+		SccLocalPath0 = ..
+		SccProvider0 = MSSCCI:PushOk\u0020CVS\u0020Proxy
+		SccProjectFilePathRelativizedFromConnection0 = Cry\u0020Havoc\u0020Dedicated\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5BE7015-CC6C-4B7E-BE8C-D7AF0A6F7517}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C5BE7015-CC6C-4B7E-BE8C-D7AF0A6F7517}.Debug|Win32.Build.0 = Debug|Win32
+		{C5BE7015-CC6C-4B7E-BE8C-D7AF0A6F7517}.Release|Win32.ActiveCfg = Release|Win32
+		{C5BE7015-CC6C-4B7E-BE8C-D7AF0A6F7517}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ILU", "ILU.vcproj", "{24B8D316-C9E7-4BE0-8029-3596BAC00F2C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 1
+		SccProjectUniqueName0 = ILU.vcproj
+		SccProjectName0 = ILU
+		SccLocalPath0 = ..\\..
+		SccProvider0 = MSSCCI:PushOk\u0020CVS\u0020Proxy
+		SccProjectFilePathRelativizedFromConnection0 = src-ILU\\msvc\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Dynamic = Dynamic
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{24B8D316-C9E7-4BE0-8029-3596BAC00F2C}.Debug.ActiveCfg = Debug|Win32
+		{24B8D316-C9E7-4BE0-8029-3596BAC00F2C}.Debug.Build.0 = Debug|Win32
+		{24B8D316-C9E7-4BE0-8029-3596BAC00F2C}.Dynamic.ActiveCfg = Dynamic|Win32
+		{24B8D316-C9E7-4BE0-8029-3596BAC00F2C}.Dynamic.Build.0 = Dynamic|Win32
+		{24B8D316-C9E7-4BE0-8029-3596BAC00F2C}.Release.ActiveCfg = Release|Win32
+		{24B8D316-C9E7-4BE0-8029-3596BAC00F2C}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

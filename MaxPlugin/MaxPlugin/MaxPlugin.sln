@@ -1,0 +1,35 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MaxPlugin", "MaxPlugin.vcproj", "{79928499-9732-4664-886F-E1904463FF5F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BB7D6D25-137E-47DE-9B94-2C079C0F1BA5} = {BB7D6D25-137E-47DE-9B94-2C079C0F1BA5}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExportLib", "ExportLib\xskinexp.vcproj", "{BB7D6D25-137E-47DE-9B94-2C079C0F1BA5}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Hybrid = Hybrid
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{79928499-9732-4664-886F-E1904463FF5F}.Debug.ActiveCfg = Debug|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Debug.Build.0 = Debug|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Hybrid.ActiveCfg = Hybrid|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Hybrid.Build.0 = Hybrid|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release.ActiveCfg = Release|Win32
+		{79928499-9732-4664-886F-E1904463FF5F}.Release.Build.0 = Release|Win32
+		{BB7D6D25-137E-47DE-9B94-2C079C0F1BA5}.Debug.ActiveCfg = Debug|Win32
+		{BB7D6D25-137E-47DE-9B94-2C079C0F1BA5}.Debug.Build.0 = Debug|Win32
+		{BB7D6D25-137E-47DE-9B94-2C079C0F1BA5}.Hybrid.ActiveCfg = Debug|Win32
+		{BB7D6D25-137E-47DE-9B94-2C079C0F1BA5}.Hybrid.Build.0 = Debug|Win32
+		{BB7D6D25-137E-47DE-9B94-2C079C0F1BA5}.Release.ActiveCfg = Release|Win32
+		{BB7D6D25-137E-47DE-9B94-2C079C0F1BA5}.Release.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal
